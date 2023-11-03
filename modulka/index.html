@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <header class="header flex justify-sb align-center">
-            <a href="#" class="header-logo br-100">логотип</a>
+            <a href="#" class="header-logo">логотип</a>
             <nav>
                 <ul class="flex">
                     <li class="header-menu-item"><a href="#">О системе</a></li>
@@ -31,16 +31,16 @@
                         <div class="slide flex">
                             <div class="slide-info">
                                 <h2 class="slide-heading">Собственная IT-платформа для заказа и доставки блюд из ресторана</h2>
-                                <p class="slide-text text-muted fw-400">Поможем создать программу лояльности, настроить CRM и коммуникацию с клиентами под ваши задачи</p>
+                                <p class="slide-text fw-400">Поможем создать программу лояльности, настроить CRM и коммуникацию с клиентами под ваши задачи</p>
                                 <div class="slide-buttons flex">
                                     <button class="slide-button">ОСТАВИТЬ ЗАЯВКУ</button>
                                     <button class="slide-button button-light">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</button>
                                 </div>
                             </div>
-                            <div class="slider-image flex justify-center align-center">
+                            <div class="slider-image flex justify-center align-center fd-column">
                                 <img src="assets/img/slider-phone.png" alt="Пример телефона">
                                 <img src="assets/img/slider-arrow.png" alt="" class="slide-arrow">
-                                <div class="slider-badge">
+                                <div class="badge slider-badge">
                                     <svg viewBox="0 0 100 100" width="100" height="100" class="badge-circle">
                                         <defs>
                                           <path id="circle"
@@ -50,8 +50,8 @@
                                               a 34,34 0 1,1 72,0
                                               a 34,34 0 1,1 -72,0"/>
                                         </defs>
-                                        <text font-size="13" class="badge-text">
-                                          <textPath xlink:href="#circle" class="badge-textPath">
+                                        <text font-size="11" class="badge-text">
+                                          <textPath xlink:href="#circle" class="badge-textPath slider-badge-textPath">
                                             удобно стильно просто быстро
                                           </textPath>
                                         </text>
@@ -77,42 +77,323 @@
                                         stroke-dashoffset: calc(.1*( 2 * (22 / 7) * 40 ));
                                     }
                                 </style> -->
-                                <div class="slider-dot br-100"></div>
-                                <div class="slider-dot br-100"></div>
-                                <div class="slider-dot active br-100"></div>
-                                <div class="slider-dot br-100"></div>
+                                <div class="slider-dot"></div>
+                                <div class="slider-dot"></div>
+                                <div class="slider-dot active"></div>
+                                <div class="slider-dot"></div>
                             </div>
                         </div>
                     </div>
-                    <span class="scroll-down">Листайте вниз</span>
+                    <span class="scroll-down fw-400">Листайте вниз</span>
                 </div>
             </section>
 
             <section class="page-section">
                 <div class="container">
-                    <h2 class="heading-secondary">Возможности IT-системы</h2>
-                    <ul class="capabilities">
+                    <h2 class="heading-secondary capabilities-heading">Возможности IT-системы</h2>
+                    <ol class="capabilities grid">
                         <li class="capability">
-                            <h3 class="capability-heading">Интеграции</h3>
-                            <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            <div class="cap-overlay br-12">
+                                <h3 class="item-heading capability-heading">Интеграции</h3>
+                                <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            </div>
+                            <div class="capability-number">0<span>1</span></div>
                         </li>
                         <li class="capability">
-                            <h3 class="capability-heading">Интеграции</h3>
-                            <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            <div class="cap-overlay br-12">
+                                <h3 class="item-heading capability-heading">Интеграции</h3>
+                                <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            </div>
+                            <div class="capability-number">0<span>2</span></div>
                         </li>
                         <li class="capability">
-                            <h3 class="capability-heading">Интеграции</h3>
-                            <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            <div class="cap-overlay br-12">
+                                <h3 class="item-heading capability-heading">Интеграции</h3>
+                                <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            </div>
+                            <div class="capability-number">0<span>3</span></div>
                         </li>
                         <li class="capability">
-                            <h3 class="capability-heading">Интеграции</h3>
-                            <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            <div class="cap-overlay br-12">
+                                <h3 class="item-heading capability-heading">Интеграции</h3>
+                                <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            </div>
+                            <div class="capability-number">0<span>4</span></div>
                         </li>
                         <li class="capability">
-                            <h3 class="capability-heading">Интеграции</h3>
-                            <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            <div class="cap-overlay br-12">
+                                <h3 class="item-heading capability-heading">Интеграции</h3>
+                                <p class="capability-text">Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система дает . Собирайте</p>
+                            </div>
+                            <div class="capability-number">0<span>5</span></div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="page-section">
+                <div class="container">
+
+                    <h2 class="heading-secondary float-heading">подробнее о нашей системе</h2>
+                    <p class="extra-heading flex align-center">Что мы предлагаем?</p>
+
+                    <ul class="details-list grid w-100">
+                        <li class="detail item-shadow br-12">
+                            <div class="badge mob-app-badge">
+                                <svg viewBox="0 0 100 100" width="100" height="100" class="badge-circle">
+                                    <defs>
+                                      <path id="circle"
+                                        d="
+                                          M 51, 50
+                                          m -37, 0
+                                          a 34,34 0 1,1 72,0
+                                          a 34,34 0 1,1 -72,0"/>
+                                    </defs>
+                                    <text font-size="12" class="badge-text">
+                                      <textPath xlink:href="#circle" class="badge-textPath mob-app-badge-textPath">
+                                        система работает как часы!
+                                      </textPath>
+                                    </text>
+                                  </svg>
+                            </div>
+                            <div class="app-examples grid">
+                                <img src="assets/img/detail-line1.png" alt="" class="app-exapmle-part">
+                                <img src="assets/img/detail-line2.png" alt="" class="app-exapmle-part">
+                                <img src="assets/img/detail-line3.png" alt="" class="app-exapmle-part">
+                                <img src="assets/img/detail-line4.png" alt="" class="app-exapmle-part">
+                            </div>
+                            <div class="detail-text-wrap">
+                                <h3 class="item-heading">Мобильное приложение</h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает возможность интегрировать складской учет. возможность интегрировать складской учет. У</p>
+                            </div>
+                        </li>
+                        <li class="detail flex item-shadow br-12">
+                            <div>
+                                <img src="assets/img/MacBook Pro 16.png" alt="" class="site-image">
+                            </div>
+                            <div class="flex justify-sb fd-column">
+                                <div class="badge site-badge">
+                                    <svg viewBox="0 0 100 100" width="100" height="100" class="badge-circle">
+                                        <defs>
+                                          <path id="circle"
+                                            d="
+                                              M 51, 50
+                                              m -37, 0
+                                              a 34,34 0 1,1 72,0
+                                              a 34,34 0 1,1 -72,0"/>
+                                        </defs>
+                                        <text font-size="11" class="badge-text">
+                                          <textPath xlink:href="#circle" class="badge-textPath site-badge-textPath">
+                                            прибыль бизнеса пора увеличивать
+                                          </textPath>
+                                        </text>
+                                      </svg>
+                                </div>
+                                <div class="detail-text-wrap">
+                                    <h3 class="item-heading">Сайт</h3>
+                                    <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает возможность интегрировать складской учет. возможность интегрировать складской учет. У</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="detail detail-small detail-delivery item-shadow br-12">
+
+                            <div class="detail-text-wrap">
+                                <h3 class="item-heading">Доставка</h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
+                            </div>
+                            
+                        </li>
+
+                        <li class="detail detail-small detail-review item-shadow br-12">
+
+                            <div class="detail-text-wrap">
+                                <h3 class="item-heading">оценка и отзыв</h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
+                            </div>
+                            
+                        </li>
+
+                        <li class="detail detail-small detail-integrations item-shadow br-12">
+                            <div class="detail-text-wrap">
+                                <h3 class="item-heading">Интеграции</h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
+                            </div>
+                            
+                        </li>
+
+                        <li class="detail detail-small detail-loyalty item-shadow br-12">
+                            <div class="detail-text-wrap">
+                                <h3 class="item-heading">система лояльности</h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
+                            </div>
+                        </li>
+
+                        <li class="detail detail-qr flex item-shadow br-12">
+                            <div class="qr-examples">
+                                <img src="assets/img/qr-code-line-1.png" alt="" class="qr-example">
+                                <img src="assets/img/qr-code-line-2.png" alt="" class="qr-example middle">
+                                <img src="assets/img/qr-code-line-3.png" alt="" class="qr-example">
+                            </div>
+                            <div class="flex align-end fd-column">
+                                <img src="assets/img/qr.png" alt="" class="qr-code">
+                                <div class="detail-text-wrap">
+                                    <h3 class="item-heading">электронное меню QR код</h3>
+                                    <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
+                
+                    <button class="details-button">Заказать разработку</button>
+                    
+
+                </div>
+            </section>
+
+            <section class="page-section">
+                <div class="container">
+                    
+                    <h2 class="heading-secondary float-heading">собственная crm-система</h2>
+                    <p class="extra-heading flex align-center">цифры и не только</p>
+
+                    <div class="tabs-wrapper flex justify-sb w-100">
+                        <ul class="tabs">
+                            <li class="tab active">Статистика по выручке</li>
+                            <li class="tab">Статистика по заказам</li>
+                            <li class="tab">Гибкая настройка полигонов</li>
+                            <li class="tab">Просмотр оценок и отзывов</li>
+                            <li class="tab">Создание сториз</li>
+                            <li class="tab">Создание промокодов</li>
+                            <li class="tab">Контроль доступов</li>
+                        </ul>
+                        <figure class="tab-content">
+                            <img src="assets/img/vyruchka-stat.png" alt="">
+                        </figure>
+                        <div class="badge tabs-badge">
+                            <svg viewBox="0 0 100 100" width="100" height="100" class="badge-circle">
+                                <defs>
+                                  <path id="circle"
+                                    d="
+                                      M 51, 50
+                                      m -37, 0
+                                      a 34,34 0 1,1 72,0
+                                      a 34,34 0 1,1 -72,0"/>
+                                </defs>
+                                <text font-size="11" class="badge-text tabs-badge-text">
+                                  <textPath xlink:href="#circle" class="badge-textPath tabs-badge-textPath">
+                                    очень гибкая система - проверьте сами!
+                                  </textPath>
+                                </text>
+                              </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="page-section">
+                <div class="container">
+
+                    <h2 class="heading-secondary float-heading">Этапы реализации</h2>
+                    <p class="extra-heading flex align-center">шаг за шагом</p>
+
+                    <ol class="stages-list flex w-100">
+
+                        <li class="stage item-shadow br-12">
+                            <figure class="stage-img-wrap">
+                                <img src="assets/img/stage1.png"" alt="" class="stage-img">
+                            </figure>
+                            <span class="stage-number">шаг 1</span>
+                            <h4 class="stage-text">Настройки стиля приложения</h4>
+                            <button class="stage-button">Подробнее</button>
+                            <p class="stage-hidden">Настройка стиля приложения Настройка стиля приложения Настройка стиля приложения Настройка стиля приложения</p>
+                        </li>
+
+                        <li class="stage item-shadow br-12">
+                            <figure class="stage-img-wrap">
+                                <img src="assets/img/stage2.png"" alt="" class="stage-img">
+                            </figure>
+                            <span class="stage-number">шаг 2</span>
+                            <h4 class="stage-text">Настройки стиля приложения</h4>
+                            <button class="stage-button">Подробнее</button>
+                            <p class="stage-hidden">Настройка стиля приложения Настройка стиля приложения Настройка стиля приложения Настройка стиля приложения</p>
+                        </li>
+
+                        <li class="stage item-shadow br-12">
+                            <figure class="stage-img-wrap">
+                                <img src="assets/img/stage3.png"" alt="" class="stage-img">
+                            </figure>
+                            <span class="stage-number">шаг 3</span>
+                            <h4 class="stage-text">Настройки стиля приложения</h4>
+                            <button class="stage-button">Подробнее</button>
+                            <p class="stage-hidden">Настройка стиля приложения Настройка стиля приложения Настройка стиля приложения Настройка стиля приложения</p>
+                        </li>
+
+                        <li class="stage item-shadow br-12">
+                            <figure class="stage-img-wrap">
+                                <img src="assets/img/stage4.png"" alt="" class="stage-img">
+                            </figure>
+                            <span class="stage-number">шаг 4</span>
+                            <h4 class="stage-text">Настройки стиля приложения</h4>
+                            <button class="stage-button">Подробнее</button>
+                            <p class="stage-hidden">Настройка стиля приложения Настройка стиля приложения Настройка стиля приложения Настройка стиля приложения</p>
+                        </li>
+
+                    </ol>
+
+                    <div class="timeline"></div>
+
+                </div>
+            </section>
+
+            <section class="page-section">
+                <div class="container">
+
+                    <h2 class="heading-secondary float-heading indicators-section-heading">Эффективность бизнеса после внедрения</h2>
+                    <p class="extra-heading flex align-center">показатели</p>
+
+                    <div class="flex w-100"><span class="indicator-accent">Кейс: Бао.</span> Ресторан увеличил эффективность после внедрения IT-системы</div>
+
+                    <ul class="grid indicators">
+                        <li class="indicator flex br-12">
+                            <div class="indicator-text-wrap">
+                                <h3 class="indicator-heading">Рост среднего чека <span class="indicator-accent">на 25%</span></h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система процессы. Наша система процессы. Наша</p>
+                            </div>
+                            <figure class="indicator-image-wrap flex justify-center" >
+                                <img src="assets/img/indicator1.png" alt="">
+                            </figure>
+                        </li>
+                        <li class="indicator flex br-12">
+                            <div class="indicator-text-wrap">
+                                <h3 class="indicator-heading">Рост среднего чека <span class="indicator-accent">на 25%</span></h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система процессы. Наша система процессы. Наша</p>
+                            </div>
+                            <figure class="indicator-image-wrap flex justify-center" >
+                                <img src="assets/img/indicator2.png" alt="">
+                            </figure>
+                        </li>
+                        <li class="indicator flex br-12">
+                            <div class="indicator-text-wrap">
+                                <h3 class="indicator-heading">Рост среднего чека <span class="indicator-accent">на 25%</span></h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система процессы. Наша система процессы. Наша</p>
+                            </div>
+                            <figure class="indicator-image-wrap flex justify-center" >
+                                <img src="assets/img/indicator3.png" alt="">
+                            </figure>
+                        </li>
+                        <li class="indicator flex br-12">
+                            <div class="indicator-text-wrap">
+                                <h3 class="indicator-heading">Рост среднего чека <span class="indicator-accent">на 25%</span></h3>
+                                <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система процессы. Наша система процессы. Наша</p>
+                            </div>
+                            <figure class="indicator-image-wrap flex justify-center" >
+                                <img src="assets/img/indicator4.png" alt="">
+                            </figure>
+                        </li>
+                    </ul>
+
                 </div>
             </section>
         </main>

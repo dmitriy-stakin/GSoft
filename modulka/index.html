@@ -8,11 +8,12 @@
     <title>Modulka landing page</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container header-container">
         <header class="header flex justify-sb align-center">
             <a href="#" class="header-logo">логотип</a>
-            <nav>
-                <ul class="flex">
+            <!-- под десктоп и мобилку два разных меню -->
+            <nav class="header-menu-container">
+                <ul class="header-menu flex">
                     <li class="header-menu-item"><a href="#">О системе</a></li>
                     <li class="header-menu-item"><a href="#">Преимущества</a></li>
                     <li class="header-menu-item"><a href="#">CRM система</a></li>
@@ -21,8 +22,27 @@
                     <li class="header-menu-item"><a href="#">Кейсы</a></li>
                 </ul>
             </nav>
-            <a href="tel:89885650038" class="header-phone">+7 988 565 00 38</a>
+            <div class="flex align-center">
+                <a href="tel:89885650038" class="header-phone">+7 988 565 00 38</a>
+                <div class="burger desk-hidden">
+                    <div class="burger-line"></div>
+                </div>
+            </div>
         </header>
+        <nav class="mob-menu desk-hidden">
+            <ul class="header-menu flex">
+                <li class="header-menu-item"><a href="#">О системе</a></li>
+                <li class="header-menu-item"><a href="#">Преимущества</a></li>
+                <li class="header-menu-item"><a href="#">CRM система</a></li>
+                <li class="header-menu-item"><a href="#">Эффективность</a></li>
+                <li class="header-menu-item"><a href="#">Этапы реализации</a></li>
+                <li class="header-menu-item"><a href="#">Кейсы</a></li>
+            </ul>
+            <div class="mob-menu-btns flex">
+                <a href="tel:89999999999" class="button button-light">+7 (999) 999 99 99</a>
+                <button>оставить заявку</button>
+            </div>
+        </nav>
     </div>
         <main>
             <section>
@@ -30,15 +50,16 @@
                     <div class="slider">
                         <div class="slide flex">
                             <div class="slide-info">
-                                <h2 class="slide-heading">Собственная IT-платформа для заказа и доставки блюд из ресторана</h2>
+                                <h2 class="slide-heading mobile-hidden">Собственная IT-платформа для заказа и доставки блюд из ресторана</h2>
                                 <p class="slide-text fw-400">Поможем создать программу лояльности, настроить CRM и коммуникацию с клиентами под ваши задачи</p>
                                 <div class="slide-buttons flex">
                                     <button class="slide-button">ОСТАВИТЬ ЗАЯВКУ</button>
                                     <button class="slide-button button-light">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</button>
                                 </div>
                             </div>
+                            <h2 class="slide-heading slide-heading-mobile hidden">Собственная IT-платформа для заказа и доставки блюд из ресторана</h2>
                             <div class="slider-image flex justify-center align-center fd-column">
-                                <img src="assets/img/slider-phone.png" alt="Пример телефона">
+                                <img src="assets/img/slider-phone.png" alt="Пример телефона" class="phone-image">
                                 <img src="assets/img/slider-arrow.png" alt="" class="slide-arrow">
                                 <div class="badge slider-badge">
                                     <svg viewBox="0 0 100 100" width="100" height="100" class="badge-circle">
@@ -51,7 +72,7 @@
                                               a 34,34 0 1,1 -72,0"/>
                                         </defs>
                                         <text font-size="11" class="badge-text">
-                                          <textPath xlink:href="#circle" class="badge-textPath slider-badge-textPath">
+                                          <textPath xlink:href="#circle" class="badge-textPath slider-badge-textPath fw-600">
                                             удобно стильно просто быстро
                                           </textPath>
                                         </text>
@@ -134,7 +155,7 @@
             <section class="page-section">
                 <div class="container">
 
-                    <h2 class="heading-secondary float-heading">подробнее о нашей системе</h2>
+                    <h2 class="heading-secondary float-heading">подробнее о<span class="mobile-hidden"> нашей</span> системе</h2>
                     <p class="extra-heading flex align-center">Что мы предлагаем?</p>
 
                     <ul class="details-list grid w-100">
@@ -150,7 +171,7 @@
                                           a 34,34 0 1,1 -72,0"/>
                                     </defs>
                                     <text font-size="12" class="badge-text">
-                                      <textPath xlink:href="#circle" class="badge-textPath mob-app-badge-textPath">
+                                      <textPath xlink:href="#circle" class="badge-textPath mob-app-badge-textPath fw-600">
                                         система работает как часы!
                                       </textPath>
                                     </text>
@@ -163,15 +184,15 @@
                                 <img src="assets/img/detail-line4.png" alt="" class="app-exapmle-part">
                             </div>
                             <div class="detail-text-wrap">
-                                <h3 class="item-heading">Мобильное приложение</h3>
+                                <h3 class="detail-heading item-heading">Мобильное приложение</h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает возможность интегрировать складской учет. возможность интегрировать складской учет. У</p>
                             </div>
                         </li>
-                        <li class="detail flex item-shadow br-12">
-                            <div>
+                        <li class="detail flex justify-sb item-shadow br-12">
+                            <figure class="detail-site-wrap flex align-center">
                                 <img src="assets/img/MacBook Pro 16.png" alt="" class="site-image">
-                            </div>
-                            <div class="flex justify-sb fd-column">
+                            </figure>
+                            <div class="flex justify-sb fd-column detail-site-wrap">
                                 <div class="badge site-badge">
                                     <svg viewBox="0 0 100 100" width="100" height="100" class="badge-circle">
                                         <defs>
@@ -183,14 +204,14 @@
                                               a 34,34 0 1,1 -72,0"/>
                                         </defs>
                                         <text font-size="11" class="badge-text">
-                                          <textPath xlink:href="#circle" class="badge-textPath site-badge-textPath">
+                                          <textPath xlink:href="#circle" class="badge-textPath site-badge-textPath fw-600">
                                             прибыль бизнеса пора увеличивать
                                           </textPath>
                                         </text>
                                       </svg>
                                 </div>
                                 <div class="detail-text-wrap">
-                                    <h3 class="item-heading">Сайт</h3>
+                                    <h3 class="detail-heading item-heading">Сайт</h3>
                                     <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает возможность интегрировать складской учет. возможность интегрировать складской учет. У</p>
                                 </div>
                             </div>
@@ -199,7 +220,7 @@
                         <li class="detail detail-small detail-delivery item-shadow br-12">
 
                             <div class="detail-text-wrap">
-                                <h3 class="item-heading">Доставка</h3>
+                                <h3 class="detail-heading item-heading">Доставка</h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
                             </div>
                             
@@ -208,7 +229,7 @@
                         <li class="detail detail-small detail-review item-shadow br-12">
 
                             <div class="detail-text-wrap">
-                                <h3 class="item-heading">оценка и отзыв</h3>
+                                <h3 class="detail-heading item-heading">оценка и отзыв</h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
                             </div>
                             
@@ -216,7 +237,7 @@
 
                         <li class="detail detail-small detail-integrations item-shadow br-12">
                             <div class="detail-text-wrap">
-                                <h3 class="item-heading">Интеграции</h3>
+                                <h3 class="detail-heading item-heading">Интеграции</h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
                             </div>
                             
@@ -224,21 +245,43 @@
 
                         <li class="detail detail-small detail-loyalty item-shadow br-12">
                             <div class="detail-text-wrap">
-                                <h3 class="item-heading">система лояльности</h3>
+                                <h3 class="detail-heading item-heading">система лояльности</h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
                             </div>
                         </li>
 
                         <li class="detail detail-qr flex item-shadow br-12">
+                            <div class="badge qr-badge hidden">
+                                <svg viewBox="0 0 100 100" width="100" height="100" class="badge-circle">
+                                    <defs>
+                                      <path id="circle"
+                                        d="
+                                          M 51, 50
+                                          m -37, 0
+                                          a 34,34 0 1,1 72,0
+                                          a 34,34 0 1,1 -72,0"/>
+                                    </defs>
+                                    <text font-size="11" class="badge-text">
+                                      <textPath xlink:href="#circle" class="badge-textPath qr-badge-textPath fw-600">
+                                        прибыль бизнеса пора увеличивать
+                                      </textPath>
+                                    </text>
+                                </svg>
+                            </div>
                             <div class="qr-examples">
                                 <img src="assets/img/qr-code-line-1.png" alt="" class="qr-example">
                                 <img src="assets/img/qr-code-line-2.png" alt="" class="qr-example middle">
                                 <img src="assets/img/qr-code-line-3.png" alt="" class="qr-example">
                             </div>
+                            <div class="qr-examples qr-examples-mob hidden ">
+                                <img src="assets/img/qr-code-line-1-mob.png" alt="" class="qr-example">
+                                <img src="assets/img/qr-code-line-2-mob.png" alt="" class="qr-example middle">
+                                <img src="assets/img/qr-code-line-3-mob.png" alt="" class="qr-example">
+                            </div>
                             <div class="flex align-end fd-column">
                                 <img src="assets/img/qr.png" alt="" class="qr-code">
                                 <div class="detail-text-wrap">
-                                    <h3 class="item-heading">электронное меню QR код</h3>
+                                    <h3 class="detail-heading item-heading">электронное меню QR код</h3>
                                     <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы.Наша система дает</p>
                                 </div>
                             </div>
@@ -267,8 +310,8 @@
                             <li class="tab">Создание промокодов</li>
                             <li class="tab">Контроль доступов</li>
                         </ul>
-                        <figure class="tab-content">
-                            <img src="assets/img/vyruchka-stat.png" alt="">
+                        <figure class="tab-content item-shadow">
+                            <img src="assets/img/vyruchka-stat.png" alt="" class="tab-image">
                         </figure>
                         <div class="badge tabs-badge">
                             <svg viewBox="0 0 100 100" width="100" height="100" class="badge-circle">
@@ -281,7 +324,7 @@
                                       a 34,34 0 1,1 -72,0"/>
                                 </defs>
                                 <text font-size="11" class="badge-text tabs-badge-text">
-                                  <textPath xlink:href="#circle" class="badge-textPath tabs-badge-textPath">
+                                  <textPath xlink:href="#circle" class="badge-textPath tabs-badge-textPath fw-600">
                                     очень гибкая система - проверьте сами!
                                   </textPath>
                                 </text>
@@ -353,50 +396,194 @@
                     <h2 class="heading-secondary float-heading indicators-section-heading">Эффективность бизнеса после внедрения</h2>
                     <p class="extra-heading flex align-center">показатели</p>
 
-                    <div class="flex w-100"><span class="indicator-accent">Кейс: Бао.</span> Ресторан увеличил эффективность после внедрения IT-системы</div>
+                    <p class="indicators-subheading w-100"><span class="color-accent">Кейс: Бао.</span> Ресторан увеличил эффективность после внедрения IT-системы</p>
 
                     <ul class="grid indicators">
                         <li class="indicator flex br-12">
                             <div class="indicator-text-wrap">
-                                <h3 class="indicator-heading">Рост среднего чека <span class="indicator-accent">на 25%</span></h3>
+                                <h3 class="item-heading">Рост среднего чека <span class="color-accent">на 25%</span></h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система процессы. Наша система процессы. Наша</p>
                             </div>
                             <figure class="indicator-image-wrap flex justify-center" >
-                                <img src="assets/img/indicator1.png" alt="">
+                                <img src="assets/img/indicator1.png" alt="" class="indicator-image">
                             </figure>
                         </li>
                         <li class="indicator flex br-12">
                             <div class="indicator-text-wrap">
-                                <h3 class="indicator-heading">Рост среднего чека <span class="indicator-accent">на 25%</span></h3>
+                                <h3 class="item-heading">Рост среднего чека <span class="color-accent">на 25%</span></h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система процессы. Наша система процессы. Наша</p>
                             </div>
                             <figure class="indicator-image-wrap flex justify-center" >
-                                <img src="assets/img/indicator2.png" alt="">
+                                <img src="assets/img/indicator2.png" alt="" class="indicator-image">
                             </figure>
                         </li>
                         <li class="indicator flex br-12">
                             <div class="indicator-text-wrap">
-                                <h3 class="indicator-heading">Рост среднего чека <span class="indicator-accent">на 25%</span></h3>
+                                <h3 class="item-heading">Рост среднего чека <span class="color-accent">на 25%</span></h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система процессы. Наша система процессы. Наша</p>
                             </div>
                             <figure class="indicator-image-wrap flex justify-center" >
-                                <img src="assets/img/indicator3.png" alt="">
+                                <img src="assets/img/indicator3.png" alt="" class="indicator-image">
                             </figure>
                         </li>
                         <li class="indicator flex br-12">
                             <div class="indicator-text-wrap">
-                                <h3 class="indicator-heading">Рост среднего чека <span class="indicator-accent">на 25%</span></h3>
+                                <h3 class="item-heading">Рост среднего чека <span class="color-accent">на 25%</span></h3>
                                 <p>Собирайте подробную аналитику о Вашем бизнесе, которая поможет оптимизировать и настраить все процессы. Наша система процессы. Наша система процессы. Наша</p>
                             </div>
                             <figure class="indicator-image-wrap flex justify-center" >
-                                <img src="assets/img/indicator4.png" alt="">
+                                <img src="assets/img/indicator4.png" alt="" class="indicator-image">
                             </figure>
                         </li>
                     </ul>
 
                 </div>
             </section>
+
+            <section class="page-section cases-section">
+                <div class="container">
+
+                    <h2 class="heading-secondary float-heading">Истории успеха</h2>
+                    <p class="extra-heading flex align-center">наши кейсы</p>
+
+                    <div class="carousel">
+                        <div class="carousel-track cases-carousel flex w-100">
+                            <div class="carousel-item">
+                                <figure class="carousel-img-wrap br-12">
+                                    <img src="assets/img/case-bao.png" alt="" class="case-img">
+                                </figure>
+                                <h3 class="item-heading carousel-heading">Ресторан восточной кухни БАО</h3>
+                                <a href="#" class="color-accent">смотреть</a>
+                            </div>
+                            <div class="carousel-item">
+                                <figure class="carousel-img-wrap br-12">
+                                    <img src="assets/img/case-rosso.png" alt="" class="case-img">
+                                </figure>
+                                <h3 class="item-heading carousel-heading">Кофейня Marrone Rosso</h3>
+                                <a href="#" class="color-accent">смотреть</a>
+                            </div>
+                            <div class="carousel-item">
+                                <figure class="carousel-img-wrap br-12">
+                                    <img src="assets/img/case-bao.png" alt="" class="case-img">
+                                </figure>
+                                <h3 class="item-heading carousel-heading">Ресторан восточной кухни БАО</h3>
+                                <a href="#" class="color-accent">смотреть</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="page-section">
+                <div class="container">
+
+                    <h2 class="heading-secondary float-heading">Оставить заявку</h2>
+                    <p class="extra-heading flex align-center">мы вам перезвоним</p>
+
+                    <div class="form-wrapper flex w-100">
+                        <div class="form-container">
+                            <h3 class="item-heading">Заявка</h3>
+                            <p class="form-subheading">Оставьте заявку и мы с Вами свяжемся</p>
+                            <form action="#" class="contact-form">
+                                <input type="name" placeholder="Имя" class="form-input">
+                                <input type="text" placeholder="Название ресторана" class="form-input">
+                                <input type="tel" placeholder="Телефон" class="form-input">
+                                <input type="text" placeholder="Город" autoComplete="address-level2" class="form-input">
+                                <button type="submit" class="form-submit">оставить заявку</button>
+                            </form>
+                        </div>
+                        <figure>
+                            <img src="assets/img/form-image.png" alt="" class="form-image">
+                        </figure>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="page-section posts-section">
+                <div class="container">
+
+                    <h2 class="heading-secondary float-heading">Интересные статьи</h2>
+                    <p class="extra-heading flex align-center">пишем контент</p>
+
+                    <div class="carousel-track post-carousel flex w-100">
+                        <article class="carousel-item post">
+                            <figure class="carousel-img-wrap">
+                                <img src="assets/img/article.png" alt="" class="post-image br-12">
+                            </figure>
+                            <h3 class="carousel-heading">Как улучшить качество сервиса и улучшить лояльность клиентов?</h3>
+                            <a href="#" class="color-accent">читать</a>
+                        </article>
+            
+                        <article class="carousel-item post">
+                            <figure class="carousel-img-wrap">
+                                <img src="assets/img/article.png" alt="" class="post-image br-12">
+                            </figure>
+                            <h3 class="carousel-heading">Как улучшить качество сервиса и улучшить лояльность клиентов?</h3>
+                            <a href="#" class="color-accent">читать</a>
+                        </article>
+
+                        <article class="carousel-item post">
+                            <figure class="carousel-img-wrap">
+                                <img src="assets/img/article.png" alt="" class="post-image br-12">
+                            </figure>
+                            <h3 class="carousel-heading">Как улучшить качество сервиса и улучшить лояльность клиентов?</h3>
+                            <a href="#" class="color-accent">читать</a>
+                        </article>
+                        <article class="carousel-item post">
+                            <figure class="carousel-img-wrap">
+                                <img src="assets/img/article.png" alt="" class="post-image br-12">
+                            </figure>
+                            <h3 class="carousel-heading">Как улучшить качество сервиса и улучшить лояльность клиентов?</h3>
+                            <a href="#" class="color-accent">читать</a>
+                        </article>
+                        <article class="carousel-item post">
+                            <figure class="carousel-img-wrap">
+                                <img src="assets/img/article.png" alt="" class="post-image br-12">
+                            </figure>
+                            <h3 class="carousel-heading">Как улучшить качество сервиса и улучшить лояльность клиентов?</h3>
+                            <a href="#" class="color-accent">читать</a>
+                        </article>
+                    </div>
+
+                </div>
+            </section>
         </main>
+        <footer class="site-footer fw-400">
+            <div class="container flex justify-sb align-center">
+                <nav class="footer-menu flex">
+                    <ul class="footer-menu-list">
+                        <li class="footer-menu-item"><a href="#">Эффективность</a></li>
+                        <li class="footer-menu-item"><a href="#">CRM система</a></li>
+                        <li class="footer-menu-item"><a href="#">Преимущества</a></li>
+                        <li class="footer-menu-item"><a href="#">О системе</a></li>
+                        <li class="footer-menu-item"><a href="#">Статьи</a></li>
+                        <li class="footer-menu-item"><a href="#">Этапы реализации</a></li>
+                        <li class="footer-menu-item"><a href="#">Кейсы</a></li>
+                        <li class="footer-menu-item"><a href="#">Правовая информация</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-logo">
+                    <p>логотип</p>
+                </div>
+
+                <address class="flex footer-contacts">
+                    <div class="mail">
+                        <p class="contact-name">Эл. почта</p>
+                        <a href="mailto:example@mail.com" class="contact">example@mail.com</a>
+                    </div>
+                    <div class="phote">
+                        <p class="contact-name">Телефон</p>
+                        <a href="tel:89885650038" class="contact">+7 988 565 00 38</a>
+                    </div>
+                </address>
+            </div>
+            <div class="cr">
+                <p>GS-Core 2023. Все права защищены.</p>
+            </div>
+        </footer>
     <script src="assets/plugins/anime.min.js"></script>
     <script src="index.js"></script>
 </body>

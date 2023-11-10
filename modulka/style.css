@@ -6,6 +6,7 @@
         url('assets/fonts/Montserrat-Black.woff') format('woff');
 
     font-weight: 900;
+    font-display: swap;
 }
 
 @font-face {
@@ -16,6 +17,7 @@
         url('assets/fonts/Montserrat-Bold.woff') format('woff');
         
     font-weight: 700;
+    font-display: fallback;
 }
 
 @font-face {
@@ -26,6 +28,7 @@
         url('assets/fonts/Montserrat-SemiBold.woff') format('woff');
         
     font-weight: 600;
+    font-display: fallback;
 }
 
 @font-face {
@@ -36,6 +39,7 @@
         url('assets/fonts/Montserrat-Medium.woff') format('woff');
         
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
@@ -46,6 +50,7 @@
         url('assets/fonts/Montserrat-Regular.woff') format('woff');
         
     font-weight: 400;
+    font-display: swap;
 }
 
 :root {
@@ -64,6 +69,7 @@ a {
 }
 
 body {
+    min-height: 100vh;
     margin:0;
 
     color: var(--text-dark);
@@ -74,6 +80,8 @@ body {
     overflow-x: hidden;
     box-sizing: border-box;
 }
+
+main { flex: 1 }
 
 h1, h2, h3, h4, h5 { margin: 0 }
 
@@ -92,6 +100,12 @@ p {
 li { list-style: none }
 
 figure { margin: 0 }
+
+figure img { display: block }
+
+img {
+    height: auto;
+}
 
 section:nth-child(even) { background-color: var(--f5-light) }
 
@@ -151,8 +165,10 @@ button:hover { background-color: #0E53BB }
 }
 
 .container {
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     padding: 0 16px;
+    box-sizing: border-box;
 }
 
 .heading-secondary { 
@@ -191,6 +207,7 @@ button:hover { background-color: #0E53BB }
 
 .header-container {
     position: relative;
+    width: 100%;
 }
 
 .extra-heading { 
@@ -254,11 +271,14 @@ button:hover { background-color: #0E53BB }
 }
 
 .phone-image {
+    max-width: 294px;
+
     background-image: url(assets/img/slider-phone-background.webp);
     background-size: 94%;
     background-position-x: 10px;
     background-position-y: 221%;
     background-repeat-x: no-repeat;
+
     border-radius: 60px;
     overflow: hidden;
     animation: animatePhone 5s infinite alternate;
@@ -644,7 +664,10 @@ button.slide-button {
 }
 
 /*объединение анимаций в разных частях страницы*/
-.app-exapmle-part, .qr-example { animation: exampleMove 20s infinite linear }
+.app-exapmle-part, .qr-example { 
+    width: auto;
+    animation: exampleMove 20s infinite linear;
+ }
 
 .qr-example { animation-duration: 7s; }
 
@@ -660,8 +683,8 @@ button.slide-button {
 
 .site-image { 
     width: 100%;
-    margin: 18px 0 12px; 
-}
+    margin: 18px 0 12px;
+ }
 
 .site-badge { align-self: flex-end }
 
@@ -779,7 +802,6 @@ button.slide-button {
 
     display: block;
     width: 100%;
-    height: 100%;
 
     opacity: 0;
     transition: opacity .6s;
@@ -837,6 +859,7 @@ button.slide-button {
 }
 
 .stage-top {
+    position: relative;
     max-height: 0;
     overflow: hidden;
     transition: max-height .6s;
@@ -846,11 +869,10 @@ button.slide-button {
     max-height: 400px;
 }
 
-.stage-data::before {
+.stage-img-wrap::before, .stage-img-wrap:after {
     content: '';
 
     position: absolute;
-    top: -45px;
     left: 50%;
 
     border: 20px solid transparent; 
@@ -859,20 +881,23 @@ button.slide-button {
     transform-origin: center;
 }
 
-/* .stage.active .stage-data::before{
-    top:unset;
-    bottom: -40px;
-    transform: rotate(180deg) translateX(50%);
-} */
+.stage-img-wrap::before {
+    bottom: 0
+}
 
-.stage-img { 
-    position: relative;
-    width: 100%;
- }
+.stage-img-wrap:after {
+    visibility: hidden;
+    top: 0;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.stage.active .stage-img-wrap:after { visibility: visible }
+
+.stage-img-wrap { position: relative; }
+
+.stage-img { width: 100% }
 
 .stage-number {
-    display: block;
-
     margin: 5px 0;
 
     font-size: .8em;
@@ -881,7 +906,7 @@ button.slide-button {
 }
 
 .stage-text {
-    max-width: 80%;
+    max-width: 85%;
     margin: 0 auto 8px;
 
     text-align: center;
@@ -1016,18 +1041,22 @@ a.color-accent:hover {
 
 .carousel {
     position: relative;
+
     width: 100%;
+
     overflow-x: scroll;
     overflow-y: hidden;
 }
 
 .carousel-track {
-    width: auto;
-    display: flex;
-    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
+
+    display: flex;
+    width: auto;
+
+    pointer-events: none;
 }
 
 .carousel-item { margin-right: 20px }
@@ -1060,7 +1089,19 @@ a.color-accent:hover {
 
 .contact-form { padding-top: 50px }
 
-.form-badge { display: none }
+.form-badge { 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.form-badge .badge-circle { 
+    background-image: url('assets/img/form-badge.webp');
+    background-position-y: 30px;
+    background-size: 45%;
+ }
+
+.form-badge .badge-text { word-spacing: 1px }
 
 .form-input {
     width: 280px;
@@ -1088,6 +1129,7 @@ a.color-accent:hover {
 }
 
 .form-image-wrap {
+    position: relative;
     width: 100%;
 }
 
@@ -1099,16 +1141,16 @@ a.color-accent:hover {
 }
 
 
-.posts-section { 
+.articles-section { 
     padding-top: 0;
     background-color: var(--f5-light);
  }
 
-.post {
+.article {
     max-width: 380px;
 }
 
-.post .carousel-heading {
+.article .carousel-heading {
     font-size: 1em;
     font-weight: 600;
 }
@@ -1188,6 +1230,8 @@ a.color-accent:hover {
         right: -200px;
     }
 }
+
+@media (min-width: 1560px) { .carousel-track { min-width: 1560px } }
 
 @media (max-width: 1410px) {
     .header-menu-container {
@@ -1471,8 +1515,6 @@ a.color-accent:hover {
 
     .detail-review { 
         order: 3;
-        background-image: url('assets/img/review-mobile.webp');
-        background-position: right 16px top 15px
     }
     .detail-integrations { order: 2 }
     .detail-loyalty { order: 1 }
@@ -1594,16 +1636,17 @@ a.color-accent:hover {
     .form-wrapper { flex-wrap: wrap }
 
     .form-container {
-        position: relative;
         order: 1;
         margin-right: 0;
         border-radius: 0 0 22px 22px;
     }
 
-    .form-image {
-        width: 100%;
-        border-radius: 22px 22px 0 0;
-    }
+    .form-image { border-radius: 22px 22px 0 0 }
+
+    .form-badge { 
+        top: 75%;
+        right: -5px;
+     }
 
     .carousel { overflow-x: scroll }
 
@@ -1612,13 +1655,11 @@ a.color-accent:hover {
 
 @media (min-width: 1024px) {
     .container {
-        max-width: 1520px;
+        max-width: 1600px;
         padding: 0 40px;
     }
 
-
     .slider-image:hover { background-size: 90% }
-
 
     .carousel::-webkit-scrollbar { display: none }
 }
@@ -1655,7 +1696,6 @@ a.color-accent:hover {
 
     .capability:not(:last-child) { margin-bottom: 64px }
 
-
     .qr-examples { display: none }
 
     .qr-examples-mob {
@@ -1679,20 +1719,6 @@ a.color-accent:hover {
 
     .indicator:last-child .indicator-image { max-height: 150px }
 
-
-
-
-    .form-badge { 
-        position: absolute;
-        display: block;
-        top: -60px;
-        right: -5px;
-    }
-
-    .form-badge .badge-circle { background-image: url('assets/img/form-badge.webp') }
-
-    .form-badge .badge-text { word-spacing: 5px }
-
 }
 
 @media (min-width: 564px) and (max-width: 1207px) {
@@ -1712,7 +1738,7 @@ a.color-accent:hover {
 }
 
 @media (max-width: 563px) {
-    body > .container {
+    body > .container:first-child {
         position: relative;
         padding: 0;
     }
@@ -1832,7 +1858,10 @@ a.color-accent:hover {
 
     .detail-delivery { background-image: url('assets/img/del-map-mobile.webp') }
 
-    .detail-review { background-size: 190px }
+    .detail-review { 
+        background-image: url('assets/img/review-mobile.webp');
+        background-position: right 16px top 15px;
+        background-size: 190px; }
 
     .detail-integrations {
         background-image: url('assets/img/integrations-mobile.webp');
@@ -1895,21 +1924,21 @@ a.color-accent:hover {
 
     .form-input { font-size: 16px }
 
-    .form-badge .badge-circle { background-position-y: 24px }
+    .form-badge .badge-circle { background-position-y: 20px }
 
 
 
 
-    .posts-section {
+    .articles-section {
         padding: 55px 0 90px;
         background-color: #ffffff;
     }
 
-    .post-image { width: 200px }
+    .article-image { width: 200px }
 
-    .post .carousel-heading { font-size: 16px }
+    .article .carousel-heading { font-size: 16px }
 
-    .post .color-accent { font-size: 14px }
+    .article .color-accent { font-size: 14px }
 
 
 

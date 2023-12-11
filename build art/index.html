@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Build art</title>
+    <meta name="description" content="">
+</head>
+<body>
+        <header class="header">
+            <div class="container">
+                <div class="header-line header-line__up flex align-center justify-sb">
+                    <div class="header__city-phone flex">
+                        <div class="header-city__wrap">
+                            <button class="header-city__current flex align-center">Астана</button>
+                            <ul class="header-city__list br-12">
+                                <li class="header-city__item"><a href="" title="">Новосибирск</a></li>
+                                <li class="header-city__item"><a href="" title="">Новосибирск</a></li>
+                                <li class="header-city__item"><a href="" title="">Новосибирск</a></li>
+                            </ul>
+                        </div>
+                        <contact class="header-phone__wrap flex align-center">
+                            <a href="tel:89990009999" class="header-phone">8 (999) 000-99-99</a>
+                        </contact>
+                    </div>
+    
+                    <figure class="header-logo__wrap">
+                        <a href="/" title="На главную">
+                            <img src="assets/img/logo.png" alt="" class="header-logo">
+                        </a>
+                    </figure>
+    
+                    <nav class="header-menu__wrap">
+                        <ul class="header-menu__list flex">
+                            <li class="header-menu__item"><a href="#" title="">Блог</a></li>
+                            <li class="header-menu__item"><a href="#" title="">Акции</a></li>
+                            <li class="header-menu__item"><a href="#" title="">Магазины</a></li>
+                            <li class="header-menu__item"><a href="#" title="">Доставка и оплата</a></li>
+                        </ul>
+                    </nav>
+    
+                    <button name="Кнопка меню" class="burger">
+                        <div class="burger-line"></div>
+                    </button>
+                </div>
+
+                <div class="header-line header-line__bottom flex align-center justify-sb">
+                    <div>
+                        <button class="button button--catalog br-12">Каталог товаров</button>
+                    </div>
+                    <div class="header-input__wrap">
+                        <input class="input--header-search" type="search" name="header-search" id="header-search" placeholder="Поиск по товарам">
+                    </div>
+                    <div class="header-account__wrap flex">
+                        <a href="" class="header-account header-account__favourite flex fd-column justify-sb" title="">Избранное</a>
+                        <button class="header-account header-account__login flex fd-column justify-sb" name="">Войти</button>
+                        <a href="" class="header-account header-account__cart flex fd-column justify-sb" title="">1089 ₸ <span class="cart-badge">3</span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="catalog-popup__wrap">
+            <div class="catalog-popup">
+                <div class="container flex">
+                    <div class="catalog-popup__column">
+                        <h2 class="catalog-popup__heading">Каталог</h2>
+                        <ul class="catalog-popup__list">
+                            <li class="catalog-popup__item">
+                                <label for="dry-mix">Сухие смеси и грунтовки</label>
+                                <input class="submenu-check" type="checkbox" name="" id="dry-mix">
+                                <div class="catalog-popup__submenu">
+                                    <h3 class="catalog-popup__heading">Сухие смеси и грунтовки</h3>
+                                    <ul class="catalog-popup__list">
+                                        <li class="catalog-popup__item">Шумоизоляция</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="catalog-popup__item">Листовые материалы</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+
+        <div class="mob-menu">
+            <button class="mob-menu__cities mob-menu__rounded flex align-center">Астана</button>
+            <nav class="mob-menu__list__wrap">
+                <ul class="mob-menu__list">
+                    <li class="mob-menu__item"><a href="#" title="">Главная</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Каталог</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Корзина</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Профиль</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Магазины</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Избранное</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Акции</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Доставка и Оплата</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Блог</a></li>
+                    <li class="mob-menu__item"><a href="#" title="">Политика конфиденциальности</a></li>
+                </ul>
+            </nav>
+            <footer class="mob-menu__contacts mob-menu__rounded flex justify-center">
+                <contact class="mob-menu__phone__wrap">
+                    <a class="mob-menu__phone" href="tel:89999999999">+7 (999) 999 99 99</a>
+                    <p class="mob-menu__phone-text">Круглосуточно и бесплатно</p>
+                </contact>
+            </footer>
+        </div>
+
+        <div class="carousel-wrap promo-slider__wrap">
+            <div class="swiper promo-slider">
+                <div class="swiper-wrapper promo-wrapper">
+    
+                    <figure class="swiper-slide promo-slide">
+                        <img class="promo-image" src="assets/img/carousel-image.png" alt="">
+                    </figure>
+                    <figure class="swiper-slide promo-slide">
+                        <img class="promo-image" src="assets/img/carousel-image.png" alt="">
+                    </figure>
+                    <figure class="swiper-slide promo-slide">
+                        <img class="promo-image" src="assets/img/carousel-image.png" alt="">
+                    </figure>
+               
+                </div>
+    
+            </div>
+            <div class="swiper-pagination flex justify-center"></div>
+            
+            <div class="swiper-button swiper-button-prev flex align-center justify-center"></div>
+            <div class="swiper-button swiper-button-next flex align-center justify-center"></div>
+        </div>
+
+        <script src="assets/plg/swiper-11.0.5/swiper-bundle.min.js"></script>
+        <script>
+            const promoSlider = new Swiper('.promo-slider', {
+                spaceBetween: 9,
+                autoHeight: true,
+                initialSlide: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.promo-slider__wrap .swiper-button-next',
+                    prevEl: '.promo-slider__wrap .swiper-button-prev',
+                },
+            });
+        </script>
+
+        <section class="page-section">
+            <div class="section-heading__wrap">
+                <h2 class="page-heading__secondary"><span class="mob-hidden">Популярные </span><span class="mob-heading-fix">категории</span> товаров</h2>
+            </div>
+            <ul class="most-popular grid">
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/listoviye-materialu.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Листовые материалы</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/sredstva-zashitu.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Средства индивидуальной защиты</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/izmeritelniue-instrumentu.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Измерительные инструменты</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/sukhie-smesi.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Сухие смеси и грунтовки</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/klei.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Клеи и средства для укладки плитки</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/elektrotovaru.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Электротовары: кабель и монтаж</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/listoviye-materialu.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Листовые материалы</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/sredstva-zashitu.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Средства индивидуальной защиты</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/izmeritelniue-instrumentu.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Измерительные инструменты</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/sukhie-smesi.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Сухие смеси и грунтовки</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/klei.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Клеи и средства для укладки плитки</p>
+                    </a>
+                </li>
+                <li class="most-popular__item">
+                    <a href="#" class="most-popular__link flex fd-column br-12">
+                        <figure class="most-popular__image-wrap">
+                            <img class="most-popular__image" src="assets/img/popular-cats/elektrotovaru.png" alt="">
+                        </figure>
+                        <p class="most-popular__heading flex align-center justify-center">Электротовары: кабель и монтаж</p>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="button button--most-popular mobile-visible">Больше</a>
+        </section>
+
+
+        <section class="page-section">
+            <div class="section-heading__wrap flex justify-sb align-center">
+                <h2 class="page-heading__secondary">Хиты продаж</h2>
+                <a class="page-heading__more" href="#" title="Открыть все хиты"><span class="desk-hidden">Показать еще</span><span class="mob-hidden">Открыть все</span></a>
+            </div>
+            <div class="carousel-wrap hits-carousel__wrap">
+                <div class="swiper hits-carousel">
+                    <ul class="swiper-wrapper hit-list products-list">
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-button swiper-button-prev flex align-center justify-center"></div>
+                <div class="promo-slider__fade left"></div>
+                <div class="swiper-button swiper-button-next flex align-center justify-center"></div>
+                <div class="promo-slider__fade right"></div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="section-heading__wrap flex justify-sb align-center">
+                <h2 class="page-heading__secondary">Новинки</h2>
+                <a class="page-heading__more" href="#" title="Открыть все новинки"><span class="desk-hidden">Показать еще</span><span class="mob-hidden">Открыть все</span></a>
+            </div>
+            <div class="carousel-wrap news-carousel__wrap">
+                <div class="swiper news-carousel">
+                    <ul class="swiper-wrapper news-list products-list">
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide hit-item product-card br-12">
+                            <figure class="product-card__image-wrap">
+                                <div class="product-card__stock flex align-center">
+                                    <div class="badge--instock">В наличии</div>
+                                    <span class="badge--hot flex align-center">15%</span>
+                                </div>
+                                
+                                <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                    <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                                <img class="product-card__image" src="assets/img/products/gipsokarton.png" alt="">
+                            </figure>
+                            <div class="product-card__content flex fd-column">
+                                <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                                <div class="product-card__order flex">
+                                    <button class="button button--product-card toggle-active">В корзину</button>
+                                    <div class="product-card__input">
+                                        <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                        <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                                <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrap flex align-center">
+                                    <div class="product-card__price"><span class="price">679</span>₸</div>
+                                    <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-button swiper-button-prev flex align-center justify-center"></div>
+                <div class="promo-slider__fade left"></div>
+                <div class="swiper-button swiper-button-next flex align-center justify-center"></div>
+                <div class="promo-slider__fade right"></div>
+            </div>
+        </section>
+
+        <section class="page-section" id="shops">
+            <div class="section-heading__wrap flex justify-sb align-center">
+                <h2 class="page-heading__secondary">Магазины</h2>
+                <a class="page-heading__more" href="#" title="Открыть список магзинов"><span class="desk-hidden">Показать еще</span><span class="mob-hidden">Открыть все</span></a>
+            </div>
+            <div class="carousel-wrap shops-carousel__wrap">
+                <div class="swiper shops-carousel">
+                    <ul class="swiper-wrapper shops-list">
+                        <li class="swiper-slide shop-item br-12">
+                            <h3 class="shop-name flex align-center">Build Art на Технической, 32</h3>
+                            <p class="shop-schedule">ВС-ЧТ: 11:00-00:00, ПТ-СБ: 11:00-2:00</p>
+                            <a href="tel:89990009999" class="shop-phone flex align-center"><span>8 (999) 000-99-99</span></a>
+                        </li>
+                        <li class="swiper-slide shop-item br-12">
+                            <h3 class="shop-name flex align-center">Build Art на Технической, 32</h3>
+                            <p class="shop-schedule">ВС-ЧТ: 11:00-00:00, ПТ-СБ: 11:00-2:00</p>
+                            <a href="tel:89990009999" class="shop-phone flex align-center"><span>8 (999) 000-99-99</span></a>
+                        </li>
+                        <li class="swiper-slide shop-item br-12">
+                            <h3 class="shop-name flex align-center">Build Art на Технической, 32</h3>
+                            <p class="shop-schedule">ВС-ЧТ: 11:00-00:00, ПТ-СБ: 11:00-2:00</p>
+                            <a href="tel:89990009999" class="shop-phone flex align-center"><span>8 (999) 000-99-99</span></a>
+                        </li>
+                        <li class="swiper-slide shop-item br-12">
+                            <h3 class="shop-name flex align-center">Build Art на Технической, 32</h3>
+                            <p class="shop-schedule">ВС-ЧТ: 11:00-00:00, ПТ-СБ: 11:00-2:00</p>
+                            <a href="tel:89990009999" class="shop-phone flex align-center"><span>8 (999) 000-99-99</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-button swiper-button-prev flex align-center justify-center"></div>
+                <div class="swiper-button swiper-button-next flex align-center justify-center"></div>
+            </div>
+        </section>
+    </div>
+
+    <section class="page-section subscription-section">
+        <div class="container">
+            <div class="subscription-heading">Build art</div>
+            <p class="subscription-text">Cеть строймаркетов, специализирующаяся на продаже товаров для строительства, ремонта, отделки и обустройства дома. С нами удобнее, ближе, быстрее!</p>
+            <form action="" class="subscription-form flex align-center justify-sb br-12">
+                <div class="subscription-form__text__wrap">
+                    <h2 class="page-heading__secondary">Подписаться на акции и скидки</h2>
+                    <p class="subscription-form__text">Подпишись на рассылку и получи 300 баллов в подарок!</p>
+                </div>
+                <div class="subscription-form__fields flex">
+                    <input type="name" placeholder="Имя" class="subscription-form__field">
+                    <input type="mail" placeholder="Электронная почта" class="subscription-form__field">
+                    <button type="submit" class="subscription-form__submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container flex justify-sb">
+            <nav class="footer-menu">
+                <ul class="footer-menu__list">
+                    <li class="footer-menu__item"><a href="#" title="">Акции</a></li>
+                    <li class="footer-menu__item"><a href="#" title="">Блог</a></li>
+                    <li class="footer-menu__item"><a href="#" title="">Правовая информация</a></li>
+                    <li class="footer-menu__item"><a href="#" title="">Магазины</a></li>
+                    <li class="footer-menu__item"><a href="#" title="">Доставка и оплата</a></li>
+                </ul>
+            </nav>
+            <div class="footer-logo__wrap">
+                <img class="footer-logo" src="assets/img/logo.png" alt="Логотип сайта">
+                <div class="footer-logo__socials flex justify-center">
+                    <a href="#" class="footer-social vk" title="Перейти в группу вк">
+                    </a>
+                    <a href="#" class="footer-social telegram" title="Перейти в телеграм канал">
+                    </a>
+                </div>
+            </div>
+            <address class="footer-contacts flex fd-column justify-sb">
+                <div class="contacts-wrap">
+                    <div class="contacts-name">Телефон</div>
+                    <a href="tel:89999999999" class="contacts-phone" title="">8 (999) 000-99-99</a>
+                </div>
+                <div class="contacts-wrap">
+                    <div class="contacts-name">Адрес</div>
+                    <div class="contacts-phone">Астана, Астана</div>
+                </div>
+            </address>
+        </div>
+        <div class="cr">
+            2024 © «BUILD ART»
+        </div>
+    </footer>
+
+    <nav class="bottom-menu">
+        <ul class="bottom-menu__list flex">
+            <li class="bottom-menu__item active">
+                <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.07 11.75H16.03C14.02 11.75 13.05 10.86 13.05 9.02V4.48C13.05 2.64 14.03 1.75 16.03 1.75H20.07C22.08 1.75 23.05 2.64 23.05 4.48V9.01C23.05 10.86 22.07 11.75 20.07 11.75ZM16.03 3.25C14.69 3.25 14.55 3.63 14.55 4.48V9.01C14.55 9.87 14.69 10.24 16.03 10.24H20.07C21.41 10.24 21.55 9.86 21.55 9.01V4.48C21.55 3.62 21.41 3.25 20.07 3.25H16.03Z" fill="#86868B"/>
+                    <path d="M20.07 23.25H16.03C14.02 23.25 13.05 22.27 13.05 20.27V16.23C13.05 14.22 14.03 13.25 16.03 13.25H20.07C22.08 13.25 23.05 14.23 23.05 16.23V20.27C23.05 22.27 22.07 23.25 20.07 23.25ZM16.03 14.75C14.85 14.75 14.55 15.05 14.55 16.23V20.27C14.55 21.45 14.85 21.75 16.03 21.75H20.07C21.25 21.75 21.55 21.45 21.55 20.27V16.23C21.55 15.05 21.25 14.75 20.07 14.75H16.03Z" fill="#86868B"/>
+                    <path d="M8.56999 11.75H4.52999C2.51999 11.75 1.54999 10.86 1.54999 9.02V4.48C1.54999 2.64 2.52999 1.75 4.52999 1.75H8.56999C10.58 1.75 11.55 2.64 11.55 4.48V9.01C11.55 10.86 10.57 11.75 8.56999 11.75ZM4.52999 3.25C3.18999 3.25 3.04999 3.63 3.04999 4.48V9.01C3.04999 9.87 3.18999 10.24 4.52999 10.24H8.56999C9.90999 10.24 10.05 9.86 10.05 9.01V4.48C10.05 3.62 9.90999 3.25 8.56999 3.25H4.52999Z" fill="#86868B"/>
+                    <path d="M8.56999 23.25H4.52999C2.51999 23.25 1.54999 22.27 1.54999 20.27V16.23C1.54999 14.22 2.52999 13.25 4.52999 13.25H8.56999C10.58 13.25 11.55 14.23 11.55 16.23V20.27C11.55 22.27 10.57 23.25 8.56999 23.25ZM4.52999 14.75C3.34999 14.75 3.04999 15.05 3.04999 16.23V20.27C3.04999 21.45 3.34999 21.75 4.52999 21.75H8.56999C9.74999 21.75 10.05 21.45 10.05 20.27V16.23C10.05 15.05 9.74999 14.75 8.56999 14.75H4.52999Z" fill="#86868B"/>
+                </svg>                    
+                <span class="bottom-menu__name">Главная</span>
+            </li>
+            <li class="bottom-menu__item">
+                <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.995" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 3.4764C7.48328 3.46901 12.2859 3.4764 17.0886 3.49857C17.5569 3.73593 17.6825 4.09797 17.4654 4.58471C17.3651 4.71463 17.2395 4.81069 17.0886 4.87287C12.2859 4.90243 7.48323 4.90243 2.68058 4.87287C2.37083 4.74844 2.22306 4.51939 2.23726 4.18572C2.22849 3.84811 2.37626 3.61168 2.68058 3.4764Z" fill="#86868B"/>
+                    <path opacity="0.962" fill-rule="evenodd" clip-rule="evenodd" d="M16.3792 5.95904C19.0297 5.89795 20.8695 7.08011 21.8986 9.50562C22.3313 10.8875 22.2722 12.2471 21.7213 13.5842C21.5606 13.928 21.3611 14.2458 21.1228 14.5373C21.9147 15.3144 22.6905 16.105 23.4502 16.9091C23.6675 17.5388 23.4532 17.9083 22.8074 18.0174C22.6081 18.0077 22.4308 17.9412 22.2754 17.8179C21.5433 17.0784 20.8044 16.3469 20.0588 15.6235C18.148 16.908 16.1678 17.0189 14.1183 15.956C12.0904 14.6334 11.2407 12.764 11.5692 10.3479C11.975 8.39151 13.1055 7.03937 14.9606 6.29153C15.4283 6.13171 15.9012 6.02088 16.3792 5.95904ZM16.4679 7.422C18.3518 7.37705 19.6891 8.2046 20.48 9.90461C21.0362 11.6182 20.6593 13.0886 19.3495 14.3157C17.6796 15.5274 16.0098 15.5274 14.34 14.3157C12.8252 12.8443 12.5518 11.1671 13.5198 9.28396C14.2237 8.21914 15.2064 7.59849 16.4679 7.422Z" fill="#86868B"/>
+                    <path opacity="0.99" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 7.37753C5.07457 7.37013 7.46851 7.37753 9.86241 7.3997C10.3349 7.69464 10.431 8.08627 10.1506 8.5745C10.0584 8.64646 9.96234 8.71295 9.86241 8.774C7.46847 8.80357 5.07453 8.80357 2.68058 8.774C2.37083 8.64956 2.22306 8.42054 2.23726 8.08685C2.22849 7.74926 2.37626 7.51279 2.68058 7.37753Z" fill="#86868B"/>
+                    <path opacity="0.99" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 11.2789C5.07457 11.2715 7.46851 11.2789 9.86241 11.3011C10.3349 11.596 10.431 11.9876 10.1506 12.4759C10.0584 12.5478 9.96234 12.6143 9.86241 12.6754C7.46847 12.7049 5.07453 12.7049 2.68058 12.6754C2.37083 12.5509 2.22306 12.3219 2.23726 11.9882C2.22849 11.6506 2.37626 11.4142 2.68058 11.2789Z" fill="#86868B"/>
+                    <path opacity="0.99" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 15.18C5.07457 15.1726 7.46851 15.18 9.86241 15.2022C10.3349 15.4971 10.431 15.8888 10.1506 16.377C10.0584 16.4489 9.96234 16.5154 9.86241 16.5765C7.46847 16.6061 5.07453 16.6061 2.68058 16.5765C2.37083 16.452 2.22306 16.223 2.23726 15.8893C2.22849 15.5517 2.37626 15.3153 2.68058 15.18Z" fill="#86868B"/>
+                    <path opacity="0.995" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 19.0814C7.67537 19.074 12.6702 19.0814 17.6649 19.1036C18.1369 19.3733 18.2477 19.7501 17.9974 20.234C17.9115 20.3496 17.8006 20.4308 17.6649 20.4779C12.6701 20.5074 7.67537 20.5074 2.68058 20.4779C2.37083 20.3534 2.22306 20.1244 2.23726 19.7907C2.22849 19.4531 2.37626 19.2166 2.68058 19.0814Z" fill="#86868B"/>
+                </svg>                    
+                <span class="bottom-menu__name">Каталог</span>
+            </li>
+            <li class="bottom-menu__item">
+                <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.04097 0.470775L1.02937 0.471611L1.01932 0.477488C0.704457 0.661679 0.513474 0.880884 0.463241 1.13832C0.413082 1.39539 0.506162 1.67598 0.725883 1.97654L0.738168 1.99335L0.75875 1.99647C1.37875 2.09051 2.00481 2.16013 2.63694 2.20534C4.19761 2.60023 5.19106 3.571 5.62246 5.12269C6.01701 8.37197 6.43437 11.6181 6.87454 14.8609L6.87401 14.8609L6.87604 14.868C7.08662 15.5983 7.46057 16.2306 7.99749 16.7643C7.61511 17.0864 7.35689 17.4892 7.22378 17.972L7.22362 17.9719L7.22286 17.9759C7.06992 18.7828 7.14181 19.4729 7.44424 20.0422C7.74032 20.5995 8.25411 21.035 8.9796 21.3509C8.62223 22.1458 8.52195 22.8836 8.68438 23.5623C8.84998 24.2543 9.28709 24.8782 9.98934 25.4347L9.98881 25.4354L9.99706 25.4397C10.6591 25.7891 11.3037 25.936 11.9298 25.8769C12.5559 25.8178 13.1593 25.5532 13.7395 25.0866L13.7399 25.0871L13.7451 25.0813C14.2491 24.527 14.5503 23.9425 14.6449 23.3278C14.7361 22.7348 14.6344 22.1179 14.3427 21.4783C17.4885 21.4335 20.6343 21.4334 23.7801 21.4782C23.5521 21.8781 23.4252 22.3134 23.3994 22.7835L23.3989 22.7835L23.3995 22.7905C23.4792 23.7236 23.7711 24.4534 24.2801 24.9742C24.789 25.495 25.5097 25.8012 26.4361 25.8975L26.4361 25.8982L26.4443 25.8977C27.2982 25.8457 27.9848 25.5969 28.4995 25.1472C29.0143 24.6975 29.3524 24.0512 29.5171 23.2134L29.5175 23.2135L29.5179 23.2068C29.5668 22.4079 29.4187 21.7317 29.0697 21.1816C28.7207 20.6315 28.1738 20.2122 27.4337 19.9217L27.4253 19.9184L27.4162 19.9183C21.5515 19.8262 15.6839 19.7799 9.81312 19.7791C9.36676 19.753 9.04795 19.5448 8.85024 19.1513C8.7588 18.7344 8.79751 18.414 8.95432 18.1815C9.11138 17.9486 9.3944 17.7928 9.81591 17.7221L17.7788 17.6873L25.7457 17.6526L25.7457 17.6538L25.7568 17.6513C27.1933 17.3172 28.1692 16.4589 28.68 15.0803L28.68 15.0803L28.6808 15.0777C29.7201 11.7395 30.7523 8.39959 31.7772 5.05801L31.7796 5.05003L31.7794 5.04169C31.7733 4.86051 31.7278 4.70337 31.6406 4.57251C31.5533 4.44162 31.4264 4.34017 31.2627 4.2671L31.2531 4.26281L31.2425 4.26276C23.1843 4.22803 15.1261 4.21639 7.0679 4.22791C6.97426 3.84451 6.82458 3.4815 6.61906 3.13896L6.61914 3.13892L6.61741 3.1364C5.28082 1.18875 3.41979 0.299384 1.04097 0.470775ZM7.36405 5.92778C14.8256 5.85889 22.2987 5.83576 29.7833 5.85853C28.8726 8.85562 27.9403 11.8477 26.9865 14.8347C26.6545 15.4592 26.1469 15.8542 25.461 16.0218C20.3625 16.0682 15.2639 16.0682 10.1654 16.0218C9.67997 15.9104 9.29536 15.7047 9.00864 15.4068C8.7212 15.1081 8.52921 14.7135 8.4347 14.2202C8.09913 11.4432 7.74223 8.6791 7.36405 5.92778ZM10.5133 21.9815C10.7756 21.7233 11.0773 21.5447 11.4188 21.4448C12.008 21.4523 12.4258 21.6043 12.6841 21.8902C12.9423 22.1759 13.0509 22.6058 12.9981 23.1908C12.7675 23.6981 12.4713 24.0084 12.1136 24.1349C11.7557 24.2616 11.3245 24.2083 10.8149 23.9625C10.5165 23.6703 10.3451 23.3607 10.2952 23.0339C10.2453 22.7068 10.3163 22.3565 10.5133 21.9815ZM25.5026 21.8137C25.737 21.6526 25.9827 21.5298 26.2397 21.445C26.9192 21.4702 27.3733 21.6541 27.6199 21.9828C27.8664 22.3115 27.9165 22.8 27.7518 23.4612C27.4986 23.8302 27.2085 24.0581 26.8826 24.1519C26.5563 24.246 26.1869 24.2077 25.7717 24.0303C25.3734 23.7025 25.1576 23.3562 25.1134 22.9921C25.0693 22.6281 25.1954 22.236 25.5026 21.8137Z" fill="#86868B" stroke="#86868B" stroke-width="0.1"/>
+                </svg>
+                <span class="cart-badge">3</span>
+                <span class="bottom-menu__name">Корзина</span>
+            </li>
+            <li class="bottom-menu__item">
+                <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5503 12.8625C15.5844 12.8625 18.044 10.4029 18.044 7.36875C18.044 4.33464 15.5844 1.875 12.5503 1.875C9.51615 1.875 7.05652 4.33464 7.05652 7.36875C7.05652 10.4029 9.51615 12.8625 12.5503 12.8625Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.45044 28.1251V24.9938C1.45044 21.3376 4.41295 18.3938 8.05045 18.3938H17.9317C21.5879 18.3938 24.5317 21.3563 24.5317 24.9938V28.1251" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+                <span class="bottom-menu__name">Профиль</span>
+            </li>
+            <li class="bottom-menu__item">
+                <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+                <span class="bottom-menu__name">Избранное</span>
+            </li>
+        </ul>
+    </nav>
+
+    <link rel="stylesheet" href="assets/plg/swiper-11.0.5/swiper.css">
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body { padding-top: 81px }
+
+.breadcrumbs { 
+    margin: 32px 0;
+    font-size: 16px;
+}
+
+.breadcrumb {
+    white-space: nowrap;
+}
+
+.breadcrumb:not(:last-child) { margin-right: 21px }
+
+.breadcrumb:not(:last-child):after {
+    content: url(assets/icons/chevron-breadcrumbs.svg);
+    position: absolute;
+    margin-left: 9px;
+}
+
+.breadcrumb.current {
+    max-width: 285px;
+    color: rgba(49, 49, 49, .6);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.posts-list {
+    gap: clamp(0.833rem, 0.159rem + 1.798vw, 1.777rem); 
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: clamp(2.777rem, 0.793rem + 5.291vw, 5.555rem);
+}
+
+.post-image { 
+    display: block;
+    border-radius: 8px;
+}
+
+.post-heading {
+    margin-top: 10px;
+    font-size: clamp(0.777rem, 0.618rem + 0.425vw, 1rem);
+    font-weight: 600;
+}
+
+
+@media (max-width: 1024px) {
+    .posts-list { grid-template-columns: repeat(3, 1fr) }
+}
+
+
+@media (max-width: 768px) {
+    .posts-list { grid-template-columns: repeat(2, 1fr) }
+}

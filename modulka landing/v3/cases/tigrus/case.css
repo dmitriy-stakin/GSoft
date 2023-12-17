@@ -1,0 +1,296 @@
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+section .container > h2 {
+    text-transform: uppercase;
+}
+
+.back-button {
+    background: url(/assets/icons/chevron-left-white.svg) #a4b11a center no-repeat;
+}
+.back-button:hover {
+    background-color: #697111;
+}
+
+
+.case-hero {
+    padding-top: clamp(1.444rem, 0.649rem + 3.814vw, 3.277rem);
+    padding-bottom: 46px;
+    padding: 59px 0 49px;
+    background: url(img/hero-back.webp) center/cover no-repeat;
+}
+
+.case-logo.desktop-hidden {
+    margin-bottom: 12px;
+}
+
+.case-header__wrap {
+    width: 100%;
+    margin-bottom: clamp(1.666rem, 1.348rem + 0.848vw, 2.111rem);
+}
+.case-header {
+    margin: 0;
+    font-size: clamp(1.222rem, 0.692rem + 2.543vw, 2.444rem);
+    line-height: 1;
+}
+.tigrus-heading__extra {
+    font-size: clamp(0.888rem, 0.503rem + 1.85vw, 1.777rem);
+    font-weight: 300;
+}
+
+.hero-image__wrap:nth-child(2) {
+    z-index: 2;
+    margin: 0 clamp(-1.666rem, -3.111rem + 6.934vw, 1.666rem);
+}
+.hero-image {max-width: 255px;}
+.hero-image__main {max-width: 315px}
+
+.animate .hero-image__left, .animate .hero-image__right {
+    animation: phoneAppear .6s forwards ease-in-out;
+}
+
+.case-hero__credits {max-width: unset}
+.case-hero__credits img {
+    max-width: 183px;
+    max-height: fit-content;
+}
+
+
+.heading--app-desc {
+    margin-bottom: clamp(2.222rem, 2.101rem + 0.578vw, 2.5rem);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.desc-item > .flex {
+    position: relative;
+    z-index: 2;
+    gap: clamp(2rem, -3.299rem + 25.433vw, 14.222rem);
+}
+.desc-text__wrap {max-width: 547px;}
+
+.desc-image__wrap > div {position: relative;}
+
+.desc-image__wrap > div:first-child {
+    z-index: 1;
+    margin-top: clamp(3.222rem, 2.837rem + 1.85vw, 4.111rem);
+    margin-right: -50px;
+}
+
+.desc-image {max-width: 174px;}
+
+.triangle {
+    position: absolute;
+    z-index: 1;
+    top: -30%;
+    left: -50%;
+}
+.triangle.small {
+    top: 0;
+    left: 50%;
+    rotate: 157deg;
+    max-width: 719px;
+}
+
+
+.what-else {
+    background-color: #FAFAFA;
+}
+.what-else__heading {
+    padding-top: clamp(2.222rem, 1.018rem + 5.781vw, 5rem);
+}
+
+.else-text__wrap {position: relative;}
+.else-text__wrap:not(:last-child) {
+    margin-bottom: 24px;
+}
+.else-text::before {
+    content: url(icons/else-disc.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 10px;
+}
+
+
+.case-indicators__card {background-color: #F5F5F5;}
+.indicator-number {color: #8D9446;}
+
+
+.userflow h2 {
+    margin-bottom: clamp(1.333rem, 1.141rem + 0.924vw, 1.777rem);
+}
+
+
+.style-guide .container, .mockups .container {position: relative;}
+.style-guide .flex{gap:clamp(0.666rem, -0.246rem + 4.378vw, 2.77rem);}
+.style-guide h2 {
+    position: relative;
+    z-index: 2;
+    margin-bottom: clamp(1.333rem, 1.141rem + 0.924vw, 1.777rem);
+}
+.style-guide img:not(.triangle) {
+    position: relative;
+    z-index: 2;
+    border-radius: 22px;
+    box-shadow: 0px 3px 25px 0px #0000000A;
+}
+.style-guide .triangle {
+    bottom: -20px;
+    left: -24%;
+    max-width: 803px;
+}
+
+
+.mockups .container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(0.944rem, 0.632rem + 1.502vw, 1.666rem);
+}
+
+.mockups img:not(.triangle) {
+    position: relative;
+    z-index: 2;
+}
+
+.mockups .triangle {
+    top: 30%;
+    left: -30%;
+    max-width: 1244px;
+    rotate: 331deg;
+}
+
+.mockups .triangle:last-child {
+    top: 0;
+    left: 50%;
+    max-width: 949px;
+    rotate: 102deg;
+}
+
+
+.case-footer {
+    padding-top: clamp(1.722rem, 0.567rem + 5.547vw, 4.388rem);
+    background: url(img/footer-back.webp) top/cover no-repeat;
+}
+.case-footer__logo {max-width: 224px;}
+.footer-credits__wrap img {max-width: 183px;}
+.contact {background-color: #ffffff;}
+
+
+@media (max-width: 1024px) {
+    .case-header__wrap {flex-direction: column-reverse;}
+}
+
+
+@media (min-width: 768px) {
+    .app-description .container {
+        position: relative;
+    }
+    .case-about__info{
+        position: absolute;
+        top: 0;
+        right: 0;
+        gap:44px;
+    }
+    .case-about__info__item:first-child .about-info__text {
+        background-color: #AABA3721;
+        color: #99A930;
+    }
+    .case-about__info__item:last-child .about-info__text {
+        background-color: #F4823A1F;
+        color: #F4823A;
+    }
+
+
+    .else-wrap {position: relative;}
+    .else-text__wrap {position: absolute;}
+    .else-text__wrap:first-of-type {
+        top: 140px;
+        left: 20%;
+    }
+    .else-text__wrap:nth-of-type(2) {
+        top: 80px;
+        left: 45%;
+        max-width: 368px;
+    }
+    .else-text__wrap:last-of-type {
+        top: 250px;
+        right: 0;
+        max-width: 252px;
+    }
+    .else-text::before, .else-text::after {
+        left: 50%;
+        translate: -50%;
+    }
+    .else-text::before {
+        top: calc(100% + 10px);
+    }
+    .else-text__wrap:last-child .else-text:before {
+        top: 0;
+        left: -20px;
+    }
+    .else-text__wrap:last-child .else-text:after {
+        top: 10px;
+        left: -20px;
+    }
+    .else-text:after {
+        content: '';
+        position: absolute;
+        top: calc(100% + 20px);
+        display: block;
+        width: 2px;
+        height: 159px;
+        background-color: #F4823A;
+    }
+}
+
+
+@media (max-width: 768px) {
+    section {overflow: clip;}
+    section .container > h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .case-header {line-height: 1.3em;}
+    .tigrus-heading__extra {
+        display: block;
+        margin-top: 5px;
+        line-height: 1.4em;
+    }
+    .case-hero {padding-bottom: 60px;}
+
+    
+    .case-about__info {display: none;}
+
+
+    .desc-item > .flex {flex-direction: column;}
+    .desc-image__wrap {padding: 0 36px;}
+    .triangle {
+        top: 0;
+        left: -25%;
+    }
+    .desc-image {width: 100%}
+
+
+    .what-else__heading {
+        margin-bottom: -25px;
+        text-align: center;
+    }
+    .else-wrap {padding-bottom: 61px;}
+    .else-text {
+        padding-left: 34px;
+    }
+
+    
+    .style-guide .flex {flex-wrap: wrap;}
+
+    .mockups .container {grid-template-columns: 1fr 1fr;}
+}
+
+
+@media (min-width: 563px) {
+    .case-header {
+        text-align: left;
+    }
+}

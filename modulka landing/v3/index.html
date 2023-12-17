@@ -85,7 +85,7 @@
                             <li class="header-menu__item"><a href="#efficiency" title="Показатели внедрения">Показатели внедрения</a></li>
                             <li class="header-menu__item"><a href="#stages" title="Этапы реализации">Этапы реализации</a></li>
                             <li class="header-menu__item"><a href="#form" title="Обратная связь">Обратная связь</a></li>
-                            <li class="header-menu__item"><a href="/posts-page.html" title="Статьи">Статьи</a></li>
+                            <!-- <li class="header-menu__item"><a href="/posts-page.html" title="Статьи">Статьи</a></li> -->
                         </ul>
                     </li>
                 </ul>
@@ -120,7 +120,7 @@
             <li class="header-menu__item"><a href="#efficiency" title="Показатели внедрения">Показатели внедрения</a></li>
             <li class="header-menu__item"><a href="#stages" title="Этапы реализации">Этапы реализации</a></li>
             <li class="header-menu__item"><a href="#form" title="Обратная связь">Обратная связь</a></li>
-            <li class="header-menu__item"><a href="/posts-page.html" title="Статьи">Статьи</a></li>
+            <!-- <li class="header-menu__item"><a href="/posts-page.html" title="Статьи">Статьи</a></li> -->
         </ul>
         <div class="mob-menu-btns flex">
             <button href="tel:89999999999" class="button button-light hidden">+7 (999) 999 99 99</button>
@@ -986,24 +986,24 @@
                     <div class="carousel-item">
                         <figure class="case-wrapper br-22">
                             <div class="link-overlay justify-center align-center">
-                                <a class="button cs-button" title="Смотреть кейс Тигрус">смотреть</a>
+                                <a href="/cases/mama/" class="button cs-button" title="Смотреть кейс Мама">смотреть</a>
                             </div>
-                            <a href="#" title="Смотреть кейс Тигрус">
-                                <img src="assets/img/case-tigrus.webp" alt="" width="605" height="605" class="case-image">
+                            <a href="/cases/mama/" title="Смотреть кейс Мама">
+                                <img src="assets/img/case-mama.webp" alt="" width="605" height="605" class="case-image">
                             </a>
                         </figure>
-                        <h3 class="cs-heading"><a href="#" title="Смотреть кейс Тигрус">Ресторанный холдинг Тигрус</a></h3>
+                        <h3 class="cs-heading"><a href="/cases/mama/" title="Смотреть кейс Мама">Сеть ресторанов Мама</a></h3>
                     </div>
                     <div class="carousel-item">
                         <figure class="case-wrapper br-22">
                             <div class="link-overlay justify-center align-center">
-                                <a class="button cs-button" title="Смотреть кейс Мама">смотреть</a>
+                                <a href="/cases/mama/" class="button cs-button" title="Смотреть кейс Тигрус">смотреть</a>
                             </div>
-                            <a href="#" title="Смотреть кейс Мама">
-                                <img src="assets/img/case-mama.webp" alt="" width="605" height="605" class="case-image">
+                            <a href="/cases/mama/" title="Смотреть кейс Тигрус">
+                                <img src="assets/img/case-tigrus.webp" alt="" width="605" height="605" class="case-image">
                             </a>
                         </figure>
-                        <h3 class="cs-heading"><a href="#" title="Смотреть кейс Мама">Сеть ресторанов Мама</a></h3>
+                        <h3 class="cs-heading"><a href="/cases/mama/" title="Смотреть кейс Тигрус">Ресторанный холдинг Тигрус</a></h3>
                     </div>
                 </div>
             </div>
@@ -1201,11 +1201,11 @@
                     <div class="form-container">
                         <h3 class="form-heading">Заявка</h3>
                         <p class="form-subheading">Оставьте заявку и мы с вами свяжемся</p>
-                        <form action="#" class="contact-form">
-                            <input type="name" placeholder="Имя" class="form-input">
-                            <input type="tel" placeholder="Телефон" class="form-input">
-                            <input type="text" placeholder="Название ресторана" class="form-input">
-                            <input type="text" placeholder="Город" autoComplete="address-level2" class="form-input">
+                        <form action="assets/plugins/mail.php" method="post" class="contact-form">
+                            <input type="name" name="ur-name" placeholder="Имя" class="form-input" required>
+                            <input type="tel" name="ur-phone" placeholder="Телефон" class="form-input" required>
+                            <input type="text" name="ur-rest" placeholder="Название ресторана" class="form-input">
+                            <input type="text" name="ur-city" placeholder="Город" autoComplete="address-level2" class="form-input">
                             <button type="submit" class="button form-submit">оставить заявку</button>
                         </form>
                     </div>
@@ -1251,7 +1251,7 @@
                 </div>
                 <div class="mail">
                     <p class="contact-name">Эл. почта</p>
-                    <a href="mailto:request@sellkit.cc" class="contact">request@sellkit.cc</a>
+                    <a href="mailto:main@sellkit.cc" class="contact">main@sellkit.cc</a>
                 </div>
             </address>
         </div>
@@ -1289,11 +1289,11 @@
                 <div class="popup__form-container">
                     <h3 class="form-heading">Заявка</h3>
                     <p class="form-subheading">Оставьте заявку и мы с вами свяжемся</p>
-                    <form action="#" class="contact-form popup__form">
-                        <input type="name" placeholder="Имя" class="form-input">
-                        <input type="tel" placeholder="Телефон" class="form-input">
-                        <input type="text" placeholder="Название ресторана" class="form-input">
-                        <input type="text" placeholder="Город" autoComplete="address-level2" class="form-input">
+                    <form action="assets/plugins/mail.php" method="post" class="contact-form popup__form">
+                        <input type="name" name="ur-name" placeholder="Имя" class="form-input" required>
+                        <input type="tel" name="ur-phone" placeholder="Телефон" class="form-input" required>
+                        <input type="text" name="ur-rest" placeholder="Название ресторана" class="form-input">
+                        <input type="text" name="ur-city" placeholder="Город" autoComplete="address-level2" class="form-input">
                         <button type="submit" class="button form-submit">оставить заявку</button>
                     </form>
                 </div>

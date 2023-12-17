@@ -23,18 +23,29 @@ mobMenu.burger.onclick = () => { menuToggle() }
 
 mobMenu.links.forEach ( item => item.onclick = () => { 
     menuToggle()
- });
+});
+
 
 // функционал попапов
 function Popup ( openBtns, container ) {
     this.container = container,
     this.openBtns = openBtns,
+    this.background = container.querySelector('.popup__background'),
+    this.content = container.querySelector('.popup__container'),
     this.closeBtns = container.querySelectorAll('.popup__close')
 
     this.openBtns.forEach( button => {
         button.onclick = () => {
             this.container.classList.add('popup-active')
         }
+
+        this.background.addEventListener('click', listenOutsideClick = (e) => {
+            const withinBoundaries = e.composedPath().includes(this.content);
+            if ( ! withinBoundaries ) {
+                this.container.classList.remove('popup-active')
+                this.background.removeEventListener('click', listenOutsideClick);
+            }
+        })
     })
 
     this.closeBtns.forEach( button => {
@@ -77,4 +88,11 @@ document.addEventListener('scroll', () => {
     })
 
     checkAnime(animSections)
+})
+
+var forms = document.querySelectorAll('form')
+forms.forEach( form => {
+    form.onsubmit = () => {
+        form.querySelector('.form-submit').setAttribute('disabled', true)
+    }
 })

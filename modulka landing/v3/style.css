@@ -1748,10 +1748,29 @@ input:focus {
 }
 
 .form-submit {
+    position: relative;
     margin-top: 50px;
     padding: 19px;
     font-weight: 600;
     text-transform: uppercase;
+}
+.form-submit[disabled]:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    translate: 0 -50%;
+    animation: rotate 2s ease-in-out infinite;
+    background: url('assets/img/loader-white.png') center/contain no-repeat;
+}
+
+@keyframes rotate {
+    100%{rotate: 359deg}
 }
 
 .form-input, .form-submit {
@@ -1813,7 +1832,10 @@ input:focus {
     gap: clamp(1.33rem, 1.139rem + 0.814vw, 1.77rem);
 }
 
-.case-image { display: block }
+.case-image {
+    display: block;
+    max-width: 536px;
+}
 
 .case-description { 
     margin-top: 16px;
@@ -1873,7 +1895,7 @@ address { font-style: normal }
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 12;
+    z-index: -1;
 
     display: flex;
     padding: 20px;
@@ -1881,14 +1903,14 @@ address { font-style: normal }
     overflow-y: scroll;
     visibility: hidden;
     background-color: transparent;
-    transition: .5s;
+    transition: background-color .5s;
 }
 
 .popup__container {
     max-width: 600px;
     margin: auto;
     opacity: 0;
-    transition: .5s;
+    transition: opacity .5s;
     position: relative;
     background-color: #ffffff;
 }
@@ -1959,6 +1981,7 @@ div.popup__form-badge {
 
 /* when active */
 .popup-active .popup__background {
+    z-index: 12;
     visibility: visible;
     background-color: #000000c9;
 }

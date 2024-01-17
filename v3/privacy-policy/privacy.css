@@ -1,0 +1,13 @@
+body {
+    padding-top: 85px;
+}
+main.container {margin-bottom: 80px;}
+main > ol > li:not(:last-child) {
+    margin-bottom: 35px;
+}
+ol > li :not(:last-child) {
+    margin-bottom: 15px;
+}
+p, li, h2 {
+    line-height: 1.5em;
+}

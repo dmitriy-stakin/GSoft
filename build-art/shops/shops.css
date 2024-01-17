@@ -1,0 +1,62 @@
+.shops-list {
+    flex: 1;
+}
+.shop-item:not(:last-child) {
+    margin-bottom: clamp(0.75rem, 0.567rem + 0.78vw, 1.25rem);
+}
+.shop-item.active {
+    border-color: var(--orange);
+}
+
+@media (min-width: 768px) {
+    .shops {
+        gap: 18px;
+    }
+    .shops-list {
+        min-width: 353px;
+        max-height: 503px;
+        padding-right: 14px;
+        overflow-y: scroll;
+    }
+    .shops-list::-webkit-scrollbar {
+        width: 6px;
+    }
+    .shops-list::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .shops-list::-webkit-scrollbar-thumb {
+        background-color: #E3EAEC;
+    }
+    .shops-map {
+        position: relative;
+        max-width: 1163px;
+        margin: 0 auto;
+    
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .shops-map__image {
+        position: absolute;
+        top: 0;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity .6s;
+    }
+    .shops-map__image.active {
+        position: relative;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    @layer variations {
+        .button--shops-map {
+            display: block;
+            margin-bottom: 20px;
+            margin-left: auto;
+            color: var(--orange);
+        }
+    }
+}

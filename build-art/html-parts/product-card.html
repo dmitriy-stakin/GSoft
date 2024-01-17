@@ -1,0 +1,44 @@
+<li class="product-card br-12">
+    <figure class="product-card__image-wrap">
+        <div class="product-card__stock flex align-center">
+            <div class="badge--instock">В наличии</div>
+            <span class="badge--hot flex align-center">15%</span>
+        </div>
+        
+        <button class="product-card__favourite toggle-active flex align-center justify-center">
+            <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                                    
+        </button>
+        <a href="/catalog/product">
+            <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+        </a>
+    </figure>
+    <div class="product-card__content flex fd-column">
+        <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+        <a href="/catalog/product">
+            <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+        </a>
+        <div class="product-card__order flex">
+            <button class="button button--product-card toggle-active">В корзину</button>
+            <div class="product-card__input">
+                <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                <button class="set-quantity minus" onclick="changeQuantity(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                        <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="set-quantity plus" onclick="changeQuantity(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="product-card__price-wrap flex align-center">
+            <div class="product-card__price"><span class="price">679</span>₸</div>
+            <div class="product-card__old-price"><span class="price">800</span>₸</div>
+        </div>
+    </div>
+</li>

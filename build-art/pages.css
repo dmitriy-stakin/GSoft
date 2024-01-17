@@ -1,9 +1,81 @@
+.container-main {flex: 1;}
 .page-heading__wrap {margin-bottom: clamp(0.75rem, 0.326rem + 1.81vw, 2rem);}
 
+.account-sections, 
+.favourite-list, 
+.sales-list, 
+.shops.flex, 
+.delivery-bottom {
+    margin-bottom: 100px; 
+}
+
+.back-secondary__wrap + .container .catalog-popup__column {
+    padding-top: 0;
+}
+.back-secondary__wrap {
+    margin: 0;
+    border-bottom: 1px solid #E6E6E6;
+}
+.button-back-secondary {
+    margin-left: 16px;
+}
+
+.cart-product {
+    position: relative;
+
+    max-width: 780px;
+    padding: 6px;
+
+    border: 1.5px solid #E6E6E6;
+    border-radius: 12px;
+}
+.cart-product:not(:last-child) {
+    margin-bottom: clamp(0.5rem, 0.409rem + 0.39vw, 0.75rem);
+} 
+.cart-product__image{max-width: clamp(6.75rem, 4.921rem + 7.805vw, 11.75rem);}
+.cart-product__remove {
+    position: absolute;
+    top: clamp(0.75rem, 0.59rem + 0.683vw, 1.188rem);
+    right: clamp(0.75rem, 0.293rem + 1.951vw, 2rem);
+    width: 12px;
+    height: 12px;
+    background: url(/catalog/icons/x-gray.svg) center/cover no-repeat;
+}
+.cart-product__info {
+    width: 100%;
+    padding: 8px;
+    text-align: left;
+}
+.cart-product__heading {
+    padding-right: 30px;
+    max-width: 372px;
+    margin-bottom: clamp(0.375rem, 0.284rem + 0.39vw, 0.625rem);
+    font-size: clamp(0.875rem, 0.738rem + 0.585vw, 1.25rem);
+}
+.cart-product__meta {
+    margin-bottom: clamp(0.375rem, -0.22rem + 2.537vw, 2rem);
+    color: var(--text-light);
+    font-size: clamp(0.75rem, 0.659rem + 0.39vw, 1rem);
+    font-weight: 500;
+}
+.cart-product__price {
+    color: var(--orange);
+}
+
+.page-heading__quantity {
+    color: var(--text-light);
+    font-size: 16px;
+    font-weight: 400;
+}
+@layer variations {
+    .button--clear-list {
+        color: var(--text-light);
+    } 
+}
 
 @media (min-width: 768px) {
     .breadcrumbs {
-        margin: 48px 0 33px;
+        margin-bottom: 33px;
         color: var(--text-light);
         font-weight: 400;
     }
@@ -15,9 +87,34 @@
 }
 
 @media (max-width: 768px) {
+    .header {display: none;}
+    .mob-menu.active {
+        top: 46px;
+        height: calc(100svh - 46px);
+    }
+    .menu-popup__wrap {top: 0}
+    .popup__container .popup__close {
+        right: 5px;
+    }
+    .popup__container .popup__close:before, .popup__container .popup__close:after {
+        background-color: #000000;
+    }
+
+    .page-heading__wrap .button--page-back{margin-right: 0;}
+    .mobile-heading .button--page-back {margin-right: 21px;}
     .button--page-back:before {
         content: url(assets/icons/chevron-black-right.svg);
         display: block;
         rotate: 180deg;
+    }
+
+    .mobile-heading {
+        /* justify-content: space-between; */
+
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 11px 16px;
+
+        box-shadow: 0px 4px 22px 0px #1B1C200F;
     }
 }

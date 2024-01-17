@@ -1,0 +1,16 @@
+.favourite-list {
+    gap: clamp(0.625rem, 0.168rem + 1.951vw, 1.875rem);
+    grid-template-columns: 1fr 1fr ;
+}
+
+@media (min-width: 768px) {
+    .favourite-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1236px) {
+    .favourite-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

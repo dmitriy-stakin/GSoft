@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pages.css">
+    <link rel="stylesheet" href="delivery.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-line header-line__up flex align-center justify-sb">
+                <div class="header__city-phone flex">
+                    <div class="header-city__wrap">
+                        <button class="header-city__current choose-city flex align-center">Астана</button>
+                    </div>
+                    <contact class="header-phone__wrap flex align-center">
+                        <a href="tel:89990009999" class="header-phone">8 (999) 000-99-99</a>
+                    </contact>
+                </div>
+    
+                <figure class="header-logo__wrap">
+                    <a href="/" title="На главную">
+                        <img src="/assets/img/logo.png" alt="" class="header-logo">
+                    </a>
+                </figure>
+    
+                <nav class="header-menu__wrap">
+                    <ul class="header-menu__list flex">
+                        <li class="header-menu__item"><a href="#" title="">Блог</a></li>
+                        <li class="header-menu__item"><a href="/sales" title="">Акции</a></li>
+                        <li class="header-menu__item"><a href="/shops" title="">Магазины</a></li>
+                        <li class="header-menu__item"><a href="/delivery" title="">Доставка и оплата</a></li>
+                    </ul>
+                </nav>
+    
+                <button name="Кнопка меню" class="burger">
+                    <div class="burger-line"></div>
+                </button>
+            </div>
+    
+            <div class="header-line header-line__bottom flex align-center justify-sb">
+                <div class="catalog-buttons__wrap">
+                    <button class="button button--catalog open-catalog br-12" onclick="openHeaderPopup(this)">Каталог товаров</button>
+                    <button class="button--catalog-back desk-hidden" onclick="closePopupSubmenu(this)"></button>
+                </div>
+                <div class="header-input__wrap">
+                    <input class="input--header-search" type="search" name="header-search" id="header-search" placeholder="Поиск по товарам" onclick="openHeaderPopup(this)">
+                </div>
+                <div class="header-account__wrap flex">
+                    <a href="/favourite" class="header-account header-account__favourite flex fd-column justify-sb" title="">Избранное</a>
+                    <button class="header-account header-account__login account-login flex fd-column justify-sb" name="">Войти</button>
+                    <a href="/cart" class="header-account header-account__cart flex fd-column justify-sb" title="">1089 ₸ <span class="cart-badge">3</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- всплывашка каталога -->
+    <div class="menu-popup__wrap catalog-popup__wrap">
+        <div class="popup-overlay"></div>
+        <div class="menu-popup catalog-popup">
+            <div class="catalog-buttons__wrap back-secondary__wrap active">
+                <button class="button--catalog-back button-back-secondary desk-hidden" onclick="closePopupSubmenu(this)"></button>
+            </div>
+            <div class="container flex">
+                <div class="catalog-popup__column">
+                    <h2 class="catalog-popup__heading mob-hidden">Каталог</h2>
+                    <ul class="catalog-popup__list">
+                        <li class="catalog-popup__item has-submenu" title="Сухие смеси и грунтовки">
+                            <span class="desk-hidden">Сухие смеси и грунтовки</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Сухие смеси и грунтовки
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Сухие смеси и грунтовки</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Листовые материалы">
+                            <span class="desk-hidden">Листовые материалы</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Листовые материалы
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Листовые материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Клеи и средства для укладки плитки">
+                            <span class="desk-hidden">Клеи и средства для укладки плитки</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Клеи и средства для укладки плитки
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Клеи и средства для укладки плитки</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Строительные расходные материалы">
+                            <span class="desk-hidden">Строительные расходные материалы</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Строительные расходные материалы
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Строительные расходные материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Аксессуары для электроинструментов">
+                            <span class="desk-hidden">Аксессуары для электроинструментов</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Аксессуары для электроинструментов
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Аксессуары для электроинструментов</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Средства индивидуальной защиты">
+                            <span class="desk-hidden">Средства индивидуальной защиты</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Средства индивидуальной защиты
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Средства индивидуальной защиты</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Измерительно-разметочные инструменты">
+                            <span class="desk-hidden">Измерительно-разметочные инструменты</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Измерительно-разметочные инструменты
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Измерительно-разметочные инструменты</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Штукатурно-отделочные инструменты">
+                            <span class="desk-hidden">Штукатурно-отделочные инструменты</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Штукатурно-отделочные инструменты
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Штукатурно-отделочные инструменты</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Электротовары: кабель и монтаж">
+                            <span class="desk-hidden">Электротовары: кабель и монтаж</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Электротовары: кабель и монтаж
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Электротовары: кабель и монтаж</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Электрощитовое оборудование">
+                            <span class="desk-hidden">Электрощитовое оборудование</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Электрощитовое оборудование
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Электрощитовое оборудование </h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Удлинители и тройники">
+                            <span class="desk-hidden">Удлинители и тройники</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Удлинители и тройники
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Листовые материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Водоснабжение">
+                            <span class="desk-hidden">Водоснабжение</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Водоснабжение
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Листовые материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Скобянные изделия">
+                            <span class="desk-hidden">Скобянные изделия</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Скобянные изделия
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Листовые материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- всплывашка поиска -->
+    <div class="menu-popup__wrap search-popup__wrap">
+        <div class="popup-overlay"></div>
+        <div class="menu-popup search-popup">
+            <div class="container">
+                <ul class="search-results grid">
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="/catalog" class="button button--light">Посмотреть все</a>
+            </div>
+        </div>
+    </div>
+    <!-- попап мобильного меню -->
+    <div class="container">
+    <div class="mob-menu">
+        <button class="mob-menu__cities mob-menu__rounded choose-city flex align-center">Астана</button>
+        <nav class="mob-menu__list__wrap">
+            <ul class="mob-menu__list">
+                <li class="mob-menu__item"><a href="/" title="">Главная</a></li>
+                <li class="mob-menu__item"><a href="/catalog" title="">Каталог</a></li>
+                <li class="mob-menu__item"><a href="/cart" title="">Корзина</a></li>
+                <li class="mob-menu__item"><a href="/account" title="">Профиль</a></li>
+                <li class="mob-menu__item"><a href="/shops" title="">Магазины</a></li>
+                <li class="mob-menu__item"><a href="/favourite" title="">Избранное</a></li>
+                <li class="mob-menu__item"><a href="/sales" title="">Акции</a></li>
+                <li class="mob-menu__item"><a href="/delivery" title="">Доставка и Оплата</a></li>
+                <li class="mob-menu__item"><a href="#" title="">Блог</a></li>
+                <li class="mob-menu__item"><a href="#" title="">Политика конфиденциальности</a></li>
+            </ul>
+        </nav>
+        <footer class="mob-menu__contacts mob-menu__rounded flex justify-center">
+            <contact class="mob-menu__phone__wrap">
+                <a class="mob-menu__phone" href="tel:89999999999">+7 (999) 999 99 99</a>
+                <p class="mob-menu__phone-text">Круглосуточно и бесплатно</p>
+            </contact>
+        </footer>
+    </div>
+    </div>
+
+    <nav class="container">
+        <ol class="breadcrumbs flex mob-hidden">
+            <li class="breadcrumb">
+                <a href="/">Главная</a>
+            </li>
+            <li class="breadcrumb">Доставка и оплата</li>
+        </ol>
+    </nav>
+
+    <main class="container">
+        <div class="page-heading__wrap mobile-heading order__heading flex justify-sb align-center">
+            <div class="flex">
+                <button class="button--page-back desk-hidden"></button>
+                <h1 class="page-heading">Доставка и оплата</h1>
+            </div>
+            <button name="Кнопка меню" class="burger desk-hidden">
+                <div class="burger-line"></div>
+            </button>
+        </div>
+        <ul class="delivery-top flex fd-column">
+            <li class="delivery-top__item">
+                <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_43_27527)">
+                    <g clip-path="url(#clip1_43_27527)">
+                    <path d="M20 39C30.4934 39 39 30.4934 39 20C39 9.50659 30.4934 1 20 1C9.50659 1 1 9.50659 1 20C1 30.4934 9.50659 39 20 39Z" stroke="#F39325" stroke-width="2"/>
+                    <path d="M20 11.4277V21.6119L25.7143 25.7134" stroke="#F39325" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_43_27527">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    <clipPath id="clip1_43_27527">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <h2 class="delivery-heading">Доставка 45—90 мин.</h2>
+                <p class="delivery-text">В зависимости от адреса с интервалом в несколько часов. Минимальное время доставки 2 часа. Заказы будут доставлены в течение 2х дней.</p>
+            </li>
+            <li class="delivery-top__item">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_43_27535)">
+                    <g clip-path="url(#clip1_43_27535)">
+                    <path d="M38.3991 30.8515L37.8557 26.5039L37.2615 1.53454L37.2466 1.53508C37.2437 1.40885 37.215 1.28396 37.1353 1.18272C37.0228 1.03763 36.8496 0.953125 36.6662 0.953125H12.8567C12.5836 0.953125 12.3455 1.1394 12.2793 1.40433L11.0888 6.16623C11.0441 6.34428 11.0846 6.53241 11.1973 6.67644C11.3009 6.8093 11.4569 6.88292 11.6235 6.8954L10.8617 17.6199H3.64262C3.10212 17.6199 2.62596 17.9813 2.48616 18.4968L0.999148 23.8492C0.897377 24.2064 0.967529 24.5813 1.19261 24.8795C1.42167 25.1837 1.77243 25.3581 2.15458 25.3581H2.19444L2.68312 30.7152H2.14262C1.48601 30.7152 0.952148 31.249 0.952148 31.9057V37.858C0.952148 38.5146 1.48601 39.0485 2.14262 39.0485H37.8568C38.5135 39.0485 39.0473 38.5146 39.0473 37.858V31.9057C39.0473 31.4454 38.7823 31.0497 38.3991 30.8515ZM36.1762 5.96311L36.6662 26.5617C36.6662 26.5819 36.6681 26.6016 36.6704 26.6218L37.1822 30.7146H33.7686L34.2841 26.583L35.4418 6.9048H35.4758C35.7489 6.9048 35.987 6.71852 36.0532 6.45358L36.1762 5.96311ZM35.011 5.71492H26.547V2.1435H35.9035L35.011 5.71492ZM21.7851 2.1435H25.3565V7.13288L25.0273 6.96865C24.8601 6.88468 24.6625 6.88468 24.4945 6.96865L23.5709 7.4305L22.6463 6.96865C22.4792 6.88468 22.2816 6.88468 22.1136 6.96865L21.7852 7.13288L21.7851 2.1435ZM12.8164 6.90539H19.4044C19.7329 6.90539 19.9997 6.63939 19.9997 6.31015C19.9997 5.98092 19.7329 5.71492 19.4044 5.71492H12.429L13.3219 2.1435H20.5953V8.09587C20.5953 8.30234 20.7023 8.4934 20.8775 8.60235C21.0531 8.71131 21.2726 8.72033 21.4568 8.62866L22.381 8.16602L23.3055 8.62786C23.4726 8.71184 23.6703 8.71184 23.8382 8.62786L24.762 8.16602L25.6864 8.62786C25.7704 8.67038 25.8613 8.69111 25.9524 8.69111C26.0614 8.69111 26.1698 8.66134 26.2655 8.60235C26.4406 8.4934 26.5477 8.30233 26.5477 8.09587V6.90539H34.2503L33.1003 26.4741L32.57 30.7146H19.4604L19.9491 25.3575H19.9889C20.3711 25.3575 20.7216 25.1831 20.9514 24.8789C21.1757 24.5807 21.2466 24.205 21.146 23.8526L19.6583 18.4985C19.517 17.9807 19.0408 17.6194 18.5003 17.6194H12.0563L12.8164 6.90539ZM3.64232 18.8102L18.5097 18.8149L19.9877 24.1673H2.73803L2.14465 24.1721L3.64232 18.8102ZM9.2851 25.3578H12.8565V26.5483H9.2851V25.3578ZM8.09462 25.3578V26.5483C8.09462 27.2048 8.62848 27.7387 9.2851 27.7387H12.8565C13.5131 27.7387 14.047 27.2048 14.047 26.5483V25.3578H18.7464L18.2137 30.7148L3.8783 30.7144L3.39015 25.3578H8.09462ZM37.8565 37.8577H2.14225V31.9053H22.9756V34.2863H17.0232V33.0958C17.0232 32.7666 16.7563 32.5006 16.428 32.5006C16.0995 32.5006 15.8327 32.7666 15.8327 33.0958V34.2863C15.8327 34.9429 16.3665 35.4767 17.0232 35.4767H22.9756C23.6321 35.4767 24.1661 34.9429 24.1661 34.2863V31.9053H37.8565V37.8577Z" fill="#F39325" stroke="#F39325" stroke-width="0.47619"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_43_27535">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    <clipPath id="clip1_43_27535">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <h2 class="delivery-heading">Самовывоз через 30—40 мин.</h2>
+                <p class="delivery-text">Если вы не хотите ждать доставку, вы можете самостоятельно забрать ваш заказ <span class="accent-color">из любого удобного магазина</span>. Как только заказ будет готов, с вами свяжется менеджер.</p>
+            </li>
+            <li class="delivery-top__item">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_43_27542)">
+                    <g clip-path="url(#clip1_43_27542)">
+                    <mask id="mask0_43_27542" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+                    <path d="M40 0H0V40H40V0Z" fill="white"/>
+                    </mask>
+                    <g mask="url(#mask0_43_27542)">
+                    <path d="M17.7605 35.8184C16.9284 35.8076 16.155 35.2085 15.8782 34.3336L15.8633 34.2866L19.8484 33.0254L19.8719 33.0996C20.2586 34.4273 19.3122 35.816 17.8154 35.8183L17.7605 35.8184Z" stroke="#F39325" stroke-width="2"/>
+                    <path d="M27.6794 27.7144L4.57114 35.0277C4.02309 35.2011 3.46287 34.9103 3.2894 34.3622L3.18387 34.0287C3.09499 33.7479 3.11652 33.4852 3.23708 33.2497L5.02971 29.9162L5.22992 29.5439L5.10237 29.1408L2.51059 20.9513C1.07694 16.4212 2.69062 11.718 6.50712 9.00225C6.61692 8.9349 6.72614 8.83995 6.81645 8.70872C6.9658 8.49171 6.99625 8.27257 6.99824 8.1361C7.00013 8.00578 6.97706 7.90312 6.96616 7.8586C6.9553 7.81426 6.94251 7.7745 6.94045 7.76809L6.84637 7.47082C6.58356 6.64039 6.73412 5.76713 7.22672 5.17625L7.22991 5.17241C8.67161 3.42542 11.1211 4.16193 11.6838 5.9399L11.7776 6.23639L11.9989 6.9357L12.7324 6.93467C17.4788 6.92799 21.562 9.84334 23.0112 14.4225L25.6149 22.6491L25.7412 23.048L26.1139 23.2381L29.5106 24.9709C29.5115 24.9714 29.5124 24.9718 29.5133 24.9723C29.749 25.0955 29.9184 25.2982 30.0077 25.5803L30.1132 25.9137L30.1186 25.9308L30.1246 25.9477C30.2887 26.4081 30.041 26.967 29.4732 27.1467L27.6794 27.7144Z" stroke="#F39325" stroke-width="2"/>
+                    </g>
+                    </g>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_43_27542">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    <clipPath id="clip1_43_27542">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <h2 class="delivery-heading">Уведомления о заказе.</h2>
+                <p class="delivery-text">В смс, push, e-mail и подтверждаем звонком оператора. Откажитесь от звонка, чтобы быстрее передать заказ в доставку.</p>
+            </li>
+            <li class="delivery-top__item">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_43_27554)">
+                    <path d="M33.3699 28.294C33.2049 27.8448 32.9448 27.4342 32.6064 27.0887L28.7886 22.5643C28.4934 22.1629 28.1116 21.8289 27.6698 21.5855C27.228 21.3421 26.7369 21.1952 26.2308 21.1551C25.7264 21.103 25.2164 21.1665 24.7418 21.3405C24.3626 21.4642 24.0123 21.6596 23.711 21.9153H23.5965L19.9315 24.9192C19.7393 25.0807 19.6197 25.3088 19.5983 25.5548C19.5769 25.8008 19.6554 26.0452 19.8169 26.2358C19.8961 26.3297 19.9939 26.4074 20.1045 26.464C20.2151 26.5206 20.3363 26.5552 20.4609 26.5655C20.5854 26.5759 20.7109 26.5619 20.8298 26.5244C20.9487 26.4868 21.0587 26.4265 21.1532 26.347L21.5922 25.9947L21.764 25.8464C22.6612 25.0861 23.6729 24.3444 24.4937 23.6027L24.7037 23.4358C24.8738 23.2801 25.0753 23.1601 25.2954 23.0835C25.5159 23.0085 25.7495 22.977 25.9826 22.9908C26.2186 23.0076 26.4473 23.0774 26.6507 23.1948C26.7568 23.2473 26.8535 23.3162 26.937 23.3987L27.2043 23.714L31.2702 28.3867C31.4427 28.5534 31.5733 28.7564 31.652 28.9801C31.7645 29.3195 31.7581 29.6855 31.6337 30.021C31.5094 30.3565 31.2742 30.6425 30.9648 30.8344L29.9722 31.539C29.3422 32.0211 28.7123 32.5217 28.0633 33.0409C27.5954 33.4626 27.0336 33.7735 26.4216 33.9495C25.7945 34.0981 25.1399 34.0981 24.5128 33.9495C22.3019 33.5918 20.1903 32.7965 18.3089 31.6131C13.9496 29.1004 10.1994 25.7041 7.31382 21.6557C5.13168 18.727 3.49101 15.4517 2.46528 11.9764C1.94198 10.3657 1.78566 8.6637 2.00715 6.98844C2.13293 6.11923 2.60613 5.33314 3.32427 4.8004L5.23315 3.33553L6.47392 2.31568C6.64411 2.15994 6.84556 2.04 7.06567 1.96337C7.21349 1.91296 7.36754 1.88179 7.5238 1.87065H7.63833C7.87974 1.89027 8.11405 1.95982 8.32552 2.07462C8.54566 2.19998 8.73467 2.37092 8.8791 2.57528L10.578 4.52226L12.945 7.22949C13.1175 7.39618 13.2481 7.59922 13.3268 7.82286C13.3827 8.04833 13.3827 8.28347 13.3268 8.50894C13.3066 8.74345 13.235 8.97105 13.1168 9.17648C12.9712 9.40627 12.7758 9.60245 12.5441 9.7513L12.1051 10.1036C11.2843 10.7897 10.4635 11.4572 9.68082 12.0691C9.38756 12.2656 9.17208 12.5535 9.06998 12.885C8.96236 13.1916 8.96236 13.5241 9.06998 13.8307C9.65646 15.342 10.4598 16.7653 11.4561 18.0584C13.0478 20.342 14.9774 22.3851 17.1827 24.1219C17.2656 24.2211 17.3704 24.3009 17.4894 24.3555C17.6083 24.41 17.7384 24.4379 17.8699 24.4371C17.9943 24.4396 18.118 24.4179 18.2337 24.3734C18.3494 24.3288 18.4548 24.2623 18.5437 24.1776C18.6325 24.093 18.7032 23.992 18.7513 23.8806C18.7995 23.7691 18.8244 23.6494 18.8243 23.5285C18.8256 23.385 18.7895 23.2434 18.7194 23.117C18.6493 22.9906 18.5475 22.8834 18.4235 22.8054C16.3326 21.1401 14.5059 19.1844 13.0023 17.0015C12.198 15.9005 11.5555 14.696 11.0934 13.4228C11.876 12.8108 12.6587 12.1619 13.4413 11.5685L13.804 11.142C14.2386 10.8559 14.5982 10.4749 14.8539 10.0294C15.0923 9.61277 15.2355 9.15109 15.2738 8.67582C15.311 8.16647 15.2395 7.65514 15.0638 7.17387C14.8948 6.72232 14.6279 6.3113 14.2812 5.96859L12.0669 3.33553L10.3871 1.48126C10.0997 1.05986 9.71376 0.710409 9.26087 0.461408C8.82384 0.211101 8.33465 0.0590386 7.82922 0.0163834C7.31858 -0.0332235 6.80301 0.0301717 6.3212 0.20181C5.86608 0.36535 5.45029 0.617782 5.09953 0.943518L3.82058 1.87065L2.06442 3.2799C0.978428 4.14783 0.280621 5.39054 0.117365 6.74738C-0.146584 8.68437 0.0359803 10.6541 0.65185 12.5142C1.74544 16.217 3.49607 19.7059 5.8249 22.8239C8.86077 27.0716 12.7988 30.6378 17.3736 33.282C19.4617 34.5865 21.7987 35.4694 24.2455 35.878C25.1722 36.0318 26.1219 35.9939 27.0325 35.7667C27.9297 35.5083 28.753 35.0513 29.4377 34.4316C29.9912 33.931 30.583 33.4674 31.1747 33.0038C31.7665 32.5403 31.8047 32.5032 32.0528 32.2807C32.4866 32.0015 32.8464 31.6266 33.1027 31.1867C33.3512 30.7515 33.507 30.2723 33.5608 29.7774C33.6015 29.2755 33.5366 28.7708 33.3699 28.294Z" fill="#F39325"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_43_27554">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>                    
+                <h2 class="delivery-heading">+7 (999) 999-99-99</h2>
+                <p class="delivery-text">Позвоните, чтобы изменить заказ, время доставки, проверить статус или отказаться</p>
+            </li>
+        </ul>
+        <div class="delivery-bottom flex fd-column justify-sb">
+            <div class="delivery-bottom__map">
+                <img src="../shops/map.png" alt="">
+            </div>
+            <ul class="delivery-bottom__list">
+                <li class="delivery-bottom__item flex">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_43_27458)">
+                        <g clip-path="url(#clip1_43_27458)">
+                        <g clip-path="url(#clip2_43_27458)">
+                        <path d="M16 40C24.8366 40 32 32.8366 32 24C32 15.1634 24.8366 8 16 8C7.16344 8 0 15.1634 0 24C0 32.8366 7.16344 40 16 40Z" fill="#FFE4C5"/>
+                        <path d="M26 27C33.1797 27 39 21.1797 39 14C39 6.8203 33.1797 1 26 1C18.8203 1 13 6.8203 13 14C13 21.1797 18.8203 27 26 27Z" stroke="#F39325" stroke-width="2"/>
+                        <path d="M26 8V15.1289L30 18" stroke="#F39325" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_43_27458">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        <clipPath id="clip1_43_27458">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        <clipPath id="clip2_43_27458">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <div>
+                        <h2 class="delivery-heading">Прием заказов</h2>
+                        <p class="delivery-text delivery-schedule">Пн-Чт:09:00 - 22:45
+                            <br>Пт-Сб:09:00 - 23:45
+                            <br>Вс:09:00 - 22:45
+                            <br><a href="tel:83432980044" class="delivery-phone flex align-center">+7 (343) 298-00-44</a>
+                        </p>
+                    </div>                        
+                </li>
+                <li class="delivery-bottom__item flex">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_43_27481)">
+                        <g clip-path="url(#clip1_43_27481)">
+                        <g clip-path="url(#clip2_43_27481)">
+                        <path d="M16 40C24.8366 40 32 32.8366 32 24C32 15.1634 24.8366 8 16 8C7.16344 8 0 15.1634 0 24C0 32.8366 7.16344 40 16 40Z" fill="#FFE4C5"/>
+                        <path d="M18.2993 18.9832L18.3001 18.9843L18.3035 18.9888L18.317 19.0068L18.3699 19.077L18.5728 19.3468C18.7488 19.5808 19.0031 19.9191 19.3164 20.336C19.9428 21.1698 20.8049 22.3183 21.7477 23.5771C23.632 26.093 25.8423 29.0546 27.1353 30.8225L27.1418 30.8313L27.1481 30.8404C27.297 31.0536 27.6249 31.0536 27.7738 30.8404L27.7832 30.8269L27.793 30.8138L36.6992 18.9068L36.7066 18.8971C38.1442 17.0232 39 14.7272 39 12.22C39 6.0578 33.845 1 27.5 1C21.1592 1 16 6.054 16 12.299C16 14.8062 16.8558 17.1016 18.2934 18.9755L18.2993 18.9832ZM18.2993 18.9832C18.2993 18.9831 18.299 18.9828 17.5223 19.5674L18.2993 18.9832Z" stroke="#F39325" stroke-width="2"/>
+                        <path d="M28 16C29.6569 16 31 14.6569 31 13C31 11.3431 29.6569 10 28 10C26.3431 10 25 11.3431 25 13C25 14.6569 26.3431 16 28 16Z" stroke="#F39325" stroke-width="2"/>
+                        </g>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_43_27481">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        <clipPath id="clip1_43_27481">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        <clipPath id="clip2_43_27481">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>                        
+                    <div>
+                        <h2 class="delivery-heading">Стоимость</h2>
+                        <p class="delivery-text">Бесплатная от 650 ₸</p>
+                    </div>                        
+                </li>
+                <li class="delivery-bottom__item flex">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_43_27458)">
+                        <g clip-path="url(#clip1_43_27458)">
+                        <g clip-path="url(#clip2_43_27458)">
+                        <path d="M16 40C24.8366 40 32 32.8366 32 24C32 15.1634 24.8366 8 16 8C7.16344 8 0 15.1634 0 24C0 32.8366 7.16344 40 16 40Z" fill="#FFE4C5"/>
+                        <path d="M26 27C33.1797 27 39 21.1797 39 14C39 6.8203 33.1797 1 26 1C18.8203 1 13 6.8203 13 14C13 21.1797 18.8203 27 26 27Z" stroke="#F39325" stroke-width="2"/>
+                        <path d="M26 8V15.1289L30 18" stroke="#F39325" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_43_27458">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        <clipPath id="clip1_43_27458">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        <clipPath id="clip2_43_27458">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <div>
+                        <h2 class="delivery-heading">Часы работы</h2>
+                        <p class="delivery-text">Пн-Чт:12:00 - 23:00
+                            <br>Пт-Сб:12:00 - 00:00
+                            <br>Вс:12:00 - 23:00
+                        </p>
+                    </div>                        
+                </li>
+                <li class="delivery-bottom__item flex">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_43_27511)">
+                        <g clip-path="url(#clip1_43_27511)">
+                        <g clip-path="url(#clip2_43_27511)">
+                        <path d="M16 40C24.8366 40 32 32.8366 32 24C32 15.1634 24.8366 8 16 8C7.16344 8 0 15.1634 0 24C0 32.8366 7.16344 40 16 40Z" fill="#FFE4C5"/>
+                        <path d="M32.3 5H10.7C9.215 5 8 6.26 8 7.8V23.2C8 24.74 9.215 26 10.7 26H32.3C33.785 26 35 24.74 35 23.2V7.8C35 6.26 33.785 5 32.3 5ZM33.65 23.2C33.65 23.9 33.11 24.6 32.3 24.6H10.7C10.025 24.6 9.35 24.04 9.35 23.2V7.8C9.35 7.1 9.89 6.4 10.7 6.4H32.3C32.975 6.4 33.65 6.96 33.65 7.8V23.2Z" fill="#F39325"/>
+                        <path d="M30.3206 19H12.6776C12.2704 19 11.999 19.4 11.999 20C11.999 20.6 12.2704 21 12.6776 21H30.3206C30.7278 21 30.9992 20.6 30.9992 20C30.9992 19.4 30.7278 19 30.3206 19Z" fill="#F39325"/>
+                        <path d="M37.3676 0H17.6306C16.1832 0 14.999 1.26 14.999 2.8V4.06C14.999 4.48 15.2622 4.76 15.6569 4.76C16.0516 4.76 16.3148 4.48 16.3148 4.2V2.8C16.3148 2.1 16.8411 1.4 17.6306 1.4H37.3676C38.0255 1.4 38.6834 1.96 38.6834 2.8V18.2C38.6834 18.9 38.1571 19.6 37.3676 19.6H36.0518C35.6571 19.6 35.3939 19.88 35.3939 20.3C35.3939 20.72 35.6571 21 36.0518 21H37.3676C38.815 21 39.9992 19.74 39.9992 18.2V2.8C39.9992 1.26 38.815 0 37.3676 0Z" fill="#F39325"/>
+                        </g>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_43_27511">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        <clipPath id="clip1_43_27511">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        <clipPath id="clip2_43_27511">
+                        <rect width="40" height="40" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <div>
+                        <h2 class="delivery-heading">Оплата</h2>
+                        <p class="delivery-text">Картой, наличными, СБП,<br> Yandex Pay, бонусами</p>
+                    </div>                        
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container flex justify-sb">
+            <nav class="footer-menu">
+                <ul class="footer-menu__list">
+                    <li class="footer-menu__item"><a href="/sales" title="Перейти к акциям">Акции</a></li>
+                    <li class="footer-menu__item"><a href="#" title="">Блог</a></li>
+                    <li class="footer-menu__item"><a href="#" title="">Правовая информация</a></li>
+                    <li class="footer-menu__item"><a href="/shops" title="Перейти к магазинам">Магазины</a></li>
+                    <li class="footer-menu__item"><a href="/delivery" title="Информация о доставке">Доставка и оплата</a></li>
+                </ul>
+            </nav>
+            <div class="footer-logo__wrap">
+                <img class="footer-logo" src="/assets/img/logo.png" alt="Логотип сайта">
+                <div class="footer-logo__socials flex justify-center">
+                    <a href="#" class="footer-social vk" title="Перейти в группу вк">
+                    </a>
+                    <a href="#" class="footer-social telegram" title="Перейти в телеграм канал">
+                    </a>
+                </div>
+            </div>
+            <address class="footer-contacts flex fd-column justify-sb">
+                <div class="contacts-wrap">
+                    <div class="contacts-name">Телефон</div>
+                    <a href="tel:89999999999" class="contacts-phone" title="">8 (999) 000-99-99</a>
+                </div>
+                <div class="contacts-wrap">
+                    <div class="contacts-name">Адрес</div>
+                    <div>Астана, Астана</div>
+                </div>
+            </address>
+        </div>
+        <div class="cr">
+            2024 © «BUILD ART»
+        </div>
+    </footer>
+    
+    <nav class="bottom-menu">
+        <ul class="bottom-menu__list flex">
+            <li class="bottom-menu__item active">
+                <a href="/">
+                    <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.07 11.75H16.03C14.02 11.75 13.05 10.86 13.05 9.02V4.48C13.05 2.64 14.03 1.75 16.03 1.75H20.07C22.08 1.75 23.05 2.64 23.05 4.48V9.01C23.05 10.86 22.07 11.75 20.07 11.75ZM16.03 3.25C14.69 3.25 14.55 3.63 14.55 4.48V9.01C14.55 9.87 14.69 10.24 16.03 10.24H20.07C21.41 10.24 21.55 9.86 21.55 9.01V4.48C21.55 3.62 21.41 3.25 20.07 3.25H16.03Z" fill="#86868B"/>
+                        <path d="M20.07 23.25H16.03C14.02 23.25 13.05 22.27 13.05 20.27V16.23C13.05 14.22 14.03 13.25 16.03 13.25H20.07C22.08 13.25 23.05 14.23 23.05 16.23V20.27C23.05 22.27 22.07 23.25 20.07 23.25ZM16.03 14.75C14.85 14.75 14.55 15.05 14.55 16.23V20.27C14.55 21.45 14.85 21.75 16.03 21.75H20.07C21.25 21.75 21.55 21.45 21.55 20.27V16.23C21.55 15.05 21.25 14.75 20.07 14.75H16.03Z" fill="#86868B"/>
+                        <path d="M8.56999 11.75H4.52999C2.51999 11.75 1.54999 10.86 1.54999 9.02V4.48C1.54999 2.64 2.52999 1.75 4.52999 1.75H8.56999C10.58 1.75 11.55 2.64 11.55 4.48V9.01C11.55 10.86 10.57 11.75 8.56999 11.75ZM4.52999 3.25C3.18999 3.25 3.04999 3.63 3.04999 4.48V9.01C3.04999 9.87 3.18999 10.24 4.52999 10.24H8.56999C9.90999 10.24 10.05 9.86 10.05 9.01V4.48C10.05 3.62 9.90999 3.25 8.56999 3.25H4.52999Z" fill="#86868B"/>
+                        <path d="M8.56999 23.25H4.52999C2.51999 23.25 1.54999 22.27 1.54999 20.27V16.23C1.54999 14.22 2.52999 13.25 4.52999 13.25H8.56999C10.58 13.25 11.55 14.23 11.55 16.23V20.27C11.55 22.27 10.57 23.25 8.56999 23.25ZM4.52999 14.75C3.34999 14.75 3.04999 15.05 3.04999 16.23V20.27C3.04999 21.45 3.34999 21.75 4.52999 21.75H8.56999C9.74999 21.75 10.05 21.45 10.05 20.27V16.23C10.05 15.05 9.74999 14.75 8.56999 14.75H4.52999Z" fill="#86868B"/>
+                    </svg>                    
+                    <span class="bottom-menu__name">Главная</span>
+                </a>
+            </li>
+            <li class="bottom-menu__item open-catalog" onclick="openHeaderPopup(this)">
+                <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.995" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 3.4764C7.48328 3.46901 12.2859 3.4764 17.0886 3.49857C17.5569 3.73593 17.6825 4.09797 17.4654 4.58471C17.3651 4.71463 17.2395 4.81069 17.0886 4.87287C12.2859 4.90243 7.48323 4.90243 2.68058 4.87287C2.37083 4.74844 2.22306 4.51939 2.23726 4.18572C2.22849 3.84811 2.37626 3.61168 2.68058 3.4764Z" fill="#86868B"/>
+                    <path opacity="0.962" fill-rule="evenodd" clip-rule="evenodd" d="M16.3792 5.95904C19.0297 5.89795 20.8695 7.08011 21.8986 9.50562C22.3313 10.8875 22.2722 12.2471 21.7213 13.5842C21.5606 13.928 21.3611 14.2458 21.1228 14.5373C21.9147 15.3144 22.6905 16.105 23.4502 16.9091C23.6675 17.5388 23.4532 17.9083 22.8074 18.0174C22.6081 18.0077 22.4308 17.9412 22.2754 17.8179C21.5433 17.0784 20.8044 16.3469 20.0588 15.6235C18.148 16.908 16.1678 17.0189 14.1183 15.956C12.0904 14.6334 11.2407 12.764 11.5692 10.3479C11.975 8.39151 13.1055 7.03937 14.9606 6.29153C15.4283 6.13171 15.9012 6.02088 16.3792 5.95904ZM16.4679 7.422C18.3518 7.37705 19.6891 8.2046 20.48 9.90461C21.0362 11.6182 20.6593 13.0886 19.3495 14.3157C17.6796 15.5274 16.0098 15.5274 14.34 14.3157C12.8252 12.8443 12.5518 11.1671 13.5198 9.28396C14.2237 8.21914 15.2064 7.59849 16.4679 7.422Z" fill="#86868B"/>
+                    <path opacity="0.99" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 7.37753C5.07457 7.37013 7.46851 7.37753 9.86241 7.3997C10.3349 7.69464 10.431 8.08627 10.1506 8.5745C10.0584 8.64646 9.96234 8.71295 9.86241 8.774C7.46847 8.80357 5.07453 8.80357 2.68058 8.774C2.37083 8.64956 2.22306 8.42054 2.23726 8.08685C2.22849 7.74926 2.37626 7.51279 2.68058 7.37753Z" fill="#86868B"/>
+                    <path opacity="0.99" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 11.2789C5.07457 11.2715 7.46851 11.2789 9.86241 11.3011C10.3349 11.596 10.431 11.9876 10.1506 12.4759C10.0584 12.5478 9.96234 12.6143 9.86241 12.6754C7.46847 12.7049 5.07453 12.7049 2.68058 12.6754C2.37083 12.5509 2.22306 12.3219 2.23726 11.9882C2.22849 11.6506 2.37626 11.4142 2.68058 11.2789Z" fill="#86868B"/>
+                    <path opacity="0.99" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 15.18C5.07457 15.1726 7.46851 15.18 9.86241 15.2022C10.3349 15.4971 10.431 15.8888 10.1506 16.377C10.0584 16.4489 9.96234 16.5154 9.86241 16.5765C7.46847 16.6061 5.07453 16.6061 2.68058 16.5765C2.37083 16.452 2.22306 16.223 2.23726 15.8893C2.22849 15.5517 2.37626 15.3153 2.68058 15.18Z" fill="#86868B"/>
+                    <path opacity="0.995" fill-rule="evenodd" clip-rule="evenodd" d="M2.68058 19.0814C7.67537 19.074 12.6702 19.0814 17.6649 19.1036C18.1369 19.3733 18.2477 19.7501 17.9974 20.234C17.9115 20.3496 17.8006 20.4308 17.6649 20.4779C12.6701 20.5074 7.67537 20.5074 2.68058 20.4779C2.37083 20.3534 2.22306 20.1244 2.23726 19.7907C2.22849 19.4531 2.37626 19.2166 2.68058 19.0814Z" fill="#86868B"/>
+                </svg>                    
+                <span class="bottom-menu__name">Каталог</span>
+            </li>
+            <li class="bottom-menu__item">
+                <a href="/cart">
+                    <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.04097 0.470775L1.02937 0.471611L1.01932 0.477488C0.704457 0.661679 0.513474 0.880884 0.463241 1.13832C0.413082 1.39539 0.506162 1.67598 0.725883 1.97654L0.738168 1.99335L0.75875 1.99647C1.37875 2.09051 2.00481 2.16013 2.63694 2.20534C4.19761 2.60023 5.19106 3.571 5.62246 5.12269C6.01701 8.37197 6.43437 11.6181 6.87454 14.8609L6.87401 14.8609L6.87604 14.868C7.08662 15.5983 7.46057 16.2306 7.99749 16.7643C7.61511 17.0864 7.35689 17.4892 7.22378 17.972L7.22362 17.9719L7.22286 17.9759C7.06992 18.7828 7.14181 19.4729 7.44424 20.0422C7.74032 20.5995 8.25411 21.035 8.9796 21.3509C8.62223 22.1458 8.52195 22.8836 8.68438 23.5623C8.84998 24.2543 9.28709 24.8782 9.98934 25.4347L9.98881 25.4354L9.99706 25.4397C10.6591 25.7891 11.3037 25.936 11.9298 25.8769C12.5559 25.8178 13.1593 25.5532 13.7395 25.0866L13.7399 25.0871L13.7451 25.0813C14.2491 24.527 14.5503 23.9425 14.6449 23.3278C14.7361 22.7348 14.6344 22.1179 14.3427 21.4783C17.4885 21.4335 20.6343 21.4334 23.7801 21.4782C23.5521 21.8781 23.4252 22.3134 23.3994 22.7835L23.3989 22.7835L23.3995 22.7905C23.4792 23.7236 23.7711 24.4534 24.2801 24.9742C24.789 25.495 25.5097 25.8012 26.4361 25.8975L26.4361 25.8982L26.4443 25.8977C27.2982 25.8457 27.9848 25.5969 28.4995 25.1472C29.0143 24.6975 29.3524 24.0512 29.5171 23.2134L29.5175 23.2135L29.5179 23.2068C29.5668 22.4079 29.4187 21.7317 29.0697 21.1816C28.7207 20.6315 28.1738 20.2122 27.4337 19.9217L27.4253 19.9184L27.4162 19.9183C21.5515 19.8262 15.6839 19.7799 9.81312 19.7791C9.36676 19.753 9.04795 19.5448 8.85024 19.1513C8.7588 18.7344 8.79751 18.414 8.95432 18.1815C9.11138 17.9486 9.3944 17.7928 9.81591 17.7221L17.7788 17.6873L25.7457 17.6526L25.7457 17.6538L25.7568 17.6513C27.1933 17.3172 28.1692 16.4589 28.68 15.0803L28.68 15.0803L28.6808 15.0777C29.7201 11.7395 30.7523 8.39959 31.7772 5.05801L31.7796 5.05003L31.7794 5.04169C31.7733 4.86051 31.7278 4.70337 31.6406 4.57251C31.5533 4.44162 31.4264 4.34017 31.2627 4.2671L31.2531 4.26281L31.2425 4.26276C23.1843 4.22803 15.1261 4.21639 7.0679 4.22791C6.97426 3.84451 6.82458 3.4815 6.61906 3.13896L6.61914 3.13892L6.61741 3.1364C5.28082 1.18875 3.41979 0.299384 1.04097 0.470775ZM7.36405 5.92778C14.8256 5.85889 22.2987 5.83576 29.7833 5.85853C28.8726 8.85562 27.9403 11.8477 26.9865 14.8347C26.6545 15.4592 26.1469 15.8542 25.461 16.0218C20.3625 16.0682 15.2639 16.0682 10.1654 16.0218C9.67997 15.9104 9.29536 15.7047 9.00864 15.4068C8.7212 15.1081 8.52921 14.7135 8.4347 14.2202C8.09913 11.4432 7.74223 8.6791 7.36405 5.92778ZM10.5133 21.9815C10.7756 21.7233 11.0773 21.5447 11.4188 21.4448C12.008 21.4523 12.4258 21.6043 12.6841 21.8902C12.9423 22.1759 13.0509 22.6058 12.9981 23.1908C12.7675 23.6981 12.4713 24.0084 12.1136 24.1349C11.7557 24.2616 11.3245 24.2083 10.8149 23.9625C10.5165 23.6703 10.3451 23.3607 10.2952 23.0339C10.2453 22.7068 10.3163 22.3565 10.5133 21.9815ZM25.5026 21.8137C25.737 21.6526 25.9827 21.5298 26.2397 21.445C26.9192 21.4702 27.3733 21.6541 27.6199 21.9828C27.8664 22.3115 27.9165 22.8 27.7518 23.4612C27.4986 23.8302 27.2085 24.0581 26.8826 24.1519C26.5563 24.246 26.1869 24.2077 25.7717 24.0303C25.3734 23.7025 25.1576 23.3562 25.1134 22.9921C25.0693 22.6281 25.1954 22.236 25.5026 21.8137Z" fill="#86868B" stroke="#86868B" stroke-width="0.1"/>
+                    </svg>
+                    <span class="cart-badge">3</span>
+                    <span class="bottom-menu__name">Корзина</span>
+                </a>
+            </li>
+            <li class="bottom-menu__item account-login">
+                <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5503 12.8625C15.5844 12.8625 18.044 10.4029 18.044 7.36875C18.044 4.33464 15.5844 1.875 12.5503 1.875C9.51615 1.875 7.05652 4.33464 7.05652 7.36875C7.05652 10.4029 9.51615 12.8625 12.5503 12.8625Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.45044 28.1251V24.9938C1.45044 21.3376 4.41295 18.3938 8.05045 18.3938H17.9317C21.5879 18.3938 24.5317 21.3563 24.5317 24.9938V28.1251" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+                <span class="bottom-menu__name">Профиль</span>
+            </li>
+            <li class="bottom-menu__item">
+                <a href="/favourite">
+                    <svg class="bottom-menu__icon" width="25" height="25" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                    <span class="bottom-menu__name">Избранное</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- авторизация -->
+    <div class="popup login-popup mob-popup-100">
+        <div class="popup__background steps-container">
+            <div class="popup__boundary">
+                <div class="popup__container step" data-step="1">
+                    <div class="icon--popup-close popup__close"></div>
+                    <h2 class="popup__heading">Вход или регистрация</h2>
+                    <p class="popup__subheading">После авторизации Вам будут начисляться баллы за заказ, а также сохранится адрес доставки.</p>
+                    <div class="login-tel__wrap">
+                        <input type="tel" name="login-tel" id="" placeholder="+7 (999) 999 99 99">
+                    </div>
+                    <!-- <input type="submit" value="Продолжить" class="button nextStep" disabled> -->
+                    <input type="submit" value="Продолжить" class="button nextStep">
+                    <p class="login-agreement">Продолжив, вы соглашаетесь <a href="#" class="accent-color">с обработкой персональных данных и Пользовательским соглашением</a></p>
+                </div>
+                <div class="popup__container step step_hide" data-step="2">
+                    <div class="icon--popup-close popup__close mob-hidden"></div>
+                    <button class="prevStep"></button>
+                    <h2 class="popup__heading">Введите код</h2>
+                    <p class="popup__subheading">Мы отправили код с сообщением на <span class="confirm-number">+7 (999) 999 99 99</span></p>
+                    <div class="login-confirm__wrap flex">
+                        <input class="login-confirm" type="number" name="log-comfirm1" id="">
+                        <input class="login-confirm" type="number" name="log-comfirm2" id="">
+                        <input class="login-confirm" type="number" name="log-comfirm3" id="">
+                        <input class="login-confirm" type="number" name="log-comfirm4" id="">
+                    </div>
+                    <div class="login-countdown">
+                        <p>Отправка нового кода возможна через <span class="login-countdown__time">12</span> сек</p>
+                        <button class="accent-color hidden">Отправить новый код</button>
+                    </div>
+
+                    <a href="/account">
+                        <input type="submit" value="Продолжить" class="button nextStep" disabled>
+                    </a>
+                    <p class="login-agreement">Продолжив, вы соглашаетесь <a href="#" class="accent-color">с обработкой персональных данных и Пользовательским соглашением</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- геолокация -->
+    <div class="popup address-popup">
+        <div class="popup__background">
+            <div class="popup__boundary">
+                <div class="popup__container">
+                    <div class="icon--popup-close popup__close"></div>
+                    <h2 class="popup__heading">Какой у вас адрес?</h2>
+                    <p class="popup__subheading">Адрес сохраним для будущих заказов</p>
+                    <div class="address-popup__buttons flex fd-column">
+                        <button class="button set-address">Указать адрес</button>
+                        <button class="button button--light popup__close">Забрать из магазина</button>
+                    </div>
+                    <div class="address-login">Уже есть аккаунт?
+                        <button class="accent-color account-login">Войти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- настройки адресов -->
+    <div class="popup location-popup">
+        <div class="popup__background steps-container">
+            <div class="popup__boundary">
+                <div class="popup__container step" data-step="1">
+                    <div class="icon--popup-close popup__close"></div>
+                    <h2 class="popup__heading">Ваш город</h2>
+                    <p class="popup__subheading">Выберете из списка</p>
+                    <div class="popup__city-select">
+                        <p class="popup__city-name">Город</p>
+                        <ul class="popup__city-list">
+                            <li class="popup__city">Sharjah</li>
+                            <li class="popup__city">Al Ain</li>
+                            <li class="popup__city">Ajman</li>
+                            <li class="popup__city">Ras Al Khaimah</li>
+                        </ul>
+                    </div>
+                    <button class="button nextStep">Выбрать</button>
+                </div>
+                <div class="popup__container add-address step step_hide pp-mobile-full" data-step="2">
+                    <div class="icon--popup-close popup__close"></div>
+                    <div class="flex add-address__content">
+                        <div class="add-address__map">
+                            <img src="/assets/img/map.png" alt="">
+                        </div>
+                        <div class="add-address__form">
+                            <div class="swipe-toggler flex justify-center desk-hidden"></div>
+                            <h2 class="popup__heading">Добавить адрес</h2>
+                            <div class="swipe-content">
+                                <form action="#" class="flex fd-column">
+                                    <input type="text" name="loc-address" placeholder="Город, улица, дом">
+                                    <button class="get-location accent-color flex align-center">Определить местоположение</button>
+                                    <div class="add-address__grid grid">
+                                        <input type="text" name="loc-entrance" placeholder="Подъезд">
+                                        <input type="text" name="loc-door-code" placeholder="Код двери">
+                                        <input type="text" name="loc-floor" placeholder="Этаж">
+                                        <input type="text" name="loc-apartment" placeholder="Квартира">
+                                    </div>
+                                    <input type="checkbox" name="private-house" id="private-house" class="hidden">
+                                    <label for="private-house" class="form-private-house flex align-center desk-hidden">
+                                        Частный дом
+                                    </label>
+                                    <input type="text" name="loc-comment" placeholder="Комментарий">
+                                    <div class="add-address__btn-wrap">
+                                        <!-- вернуть кнопку сюда -->
+                                    </div>
+                            </form>
+                            <!-- эту кнопку вернуть на место.. если нужно -->
+                            <button class="button add-address__button nextStep">Указать адрес</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__container delivery step step_hide" data-step="3">
+                    <div class="icon--popup-close popup__close"></div>
+                    <div class="delivery__toggler flex align-center mob-hidden">
+                        <div class="toggler-take-out nextStep">Самовывоз</div>
+                        <div class="toggler-delivery active">Доставка</div>
+                    </div>
+                    <div class="my-addresses can-delete flex fd-column">
+                        <div class="flex justify-sb">
+                            <div class="flex">
+                                <button class="prevStep desk-hidden"></button>
+                                <h2 class="popup__heading">Мои адреса</h2>
+                            </div>
+                            <button class="adresses__remove-all">Удалить все</button>
+                        </div>
+                        <div class="add-address-mob desk-hidden">
+                            <button class="btn--add-address flex align-center">Добавить адрес</button>
+                        </div>
+                        <ul class="account-addresses">
+                            <li class="account-address flex align-center toggle-active">
+                                <label class="flex align-center">
+                                    <input class="hidden" type="radio" name="set-city" checked>
+                                    <span class="account-address__icon"></span>
+                                    Астана, ул.Нансена, 123
+                                </label>
+                                <button class="edit-address"></button>
+                                <button class="btn--delete-address desk-hidden">удалить</button>
+                            </li>
+                            <li class="account-address flex align-center toggle-active">
+                                <label class="flex align-center">
+                                    <input class="hidden" type="radio" name="set-city">
+                                    <span class="account-address__icon"></span>
+                                    Астана, ул.Мира, 43
+                                </label>
+                                <button class="edit-address"></button>
+                                <button class="btn--delete-address desk-hidden">удалить</button>
+                            </li>
+                            <li class="account-address flex align-center toggle-active">
+                                <label class="flex align-center">
+                                    <input class="hidden" type="radio" name="set-city">
+                                    <span class="account-address__icon"></span>
+                                    Астана, ул.Нансена, 123
+                                </label>
+                                <button class="edit-address"></button>
+                                <button class="btn--delete-address desk-hidden">удалить</button>
+                            </li>
+                        </ul>
+                        <div class="delivery__buttons flex">
+                            <button class="button button--light button--edit-addresses mob-hidden popup__close">Добавить адрес</button>
+                            <button class="button button--set-addresses popup__close">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- самовывоз попап -->
+    <div class="popup take-off-popup">
+        <div class="popup__background">
+            <div class="popup__boundary">
+                <div class="popup__container delivery take-off">
+                    <div class="icon--popup-close popup__close"></div>
+                    <div class="flex take-off__wrap">
+                        <div class="take-off__map">
+                            <img src="/assets/img/map-color.png" alt="">
+                        </div>
+                        <div class="take-off__content flex fd-column to-top">
+                            <div class="delivery__toggler flex align-center mob-hidden">
+                                <div class="toggler-take-out active">Самовывоз</div>
+                                <div class="toggler-delivery prevStep">Доставка</div>
+                            </div>
+                            <div class="swipe-toggler take-out__toggler justify-center"></div>
+                            <div class="take-out__inactive-wrap">
+                                <div class="take-out__inactive-name desk-hidden">Астана, ул.Нансена, 123</div>
+                                <div class="take-out__inactive-pagination flex justify-center">
+                                    <span class="take-out__pagination active"></span>
+                                    <span class="take-out__pagination"></span>
+                                    <span class="take-out__pagination"></span>
+                                    <span class="take-out__pagination"></span>
+                                </div>
+                            </div>
+                            <div class="my-addresses flex fd-column">
+                                <div class="flex justify-sb">
+                                    <div class="flex">
+                                        <button class="prevStep desk-hidden"></button>
+                                        <h2 class="popup__heading"><span class="mob-hidden">Рестораны</span><span class="desk-hidden">Самовывоз</span></h2>
+                                    </div>
+                                    <button class="show-map accent-color desk-hidden">Смотреть на карте</button>
+                                </div>
+                                <ul class="account-addresses">
+                                    <li class="account-address flex align-center toggle-active">
+                                        <label class="flex align-center justify-sb">
+                                            <input class="hidden" type="radio" name="set-take-off" checked>
+                                            <span class="account-address__icon"></span>
+                                            Астана, ул.Нансена, 123
+                                            <div class="delivery-distance desk-hidden">3 км</div>
+                                        </label>
+                                    </li>
+                                    <li class="account-address flex align-center toggle-active">
+                                        <label class="flex align-center">
+                                            <input class="hidden" type="radio" name="set-take-off">
+                                            <span class="account-address__icon"></span>
+                                            Астана, ул.Мира, 43
+                                            <div class="delivery-distance desk-hidden">3 км</div>
+                                        </label>
+                                    </li>
+                                    <li class="account-address flex align-center toggle-active">
+                                        <label class="flex align-center">
+                                            <input class="hidden" type="radio" name="set-take-off">
+                                            <span class="account-address__icon"></span>
+                                            Астана, ул.Нансена, 123
+                                            <div class="delivery-distance desk-hidden">3 км</div>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="take-off__buttons flex">
+                                    <button class="button button--set-addresses popup__close">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pages.css">
+    <link rel="stylesheet" href="../cart.css">
+    <link rel="stylesheet" href="order.css">
+    <title>Document</title>
+</head>
+<body class="order-body">
+
+    <header class="header">
+        <div class="container">
+            <div class="header-line header-line__up flex align-center justify-sb">
+                <div class="header__city-phone flex">
+                    <div class="header-city__wrap">
+                        <button class="header-city__current choose-city flex align-center">Астана</button>
+                    </div>
+                    <contact class="header-phone__wrap flex align-center">
+                        <a href="tel:89990009999" class="header-phone">8 (999) 000-99-99</a>
+                    </contact>
+                </div>
+    
+                <figure class="header-logo__wrap">
+                    <a href="/" title="На главную">
+                        <img src="/assets/img/logo.png" alt="" class="header-logo">
+                    </a>
+                </figure>
+    
+                <nav class="header-menu__wrap">
+                    <ul class="header-menu__list flex">
+                        <li class="header-menu__item"><a href="#" title="">Блог</a></li>
+                        <li class="header-menu__item"><a href="/sales" title="">Акции</a></li>
+                        <li class="header-menu__item"><a href="/shops" title="">Магазины</a></li>
+                        <li class="header-menu__item"><a href="/delivery" title="">Доставка и оплата</a></li>
+                    </ul>
+                </nav>
+    
+                <button name="Кнопка меню" class="burger">
+                    <div class="burger-line"></div>
+                </button>
+            </div>
+    
+            <div class="header-line header-line__bottom flex align-center justify-sb">
+                <div class="catalog-buttons__wrap">
+                    <button class="button button--catalog open-catalog br-12" onclick="openHeaderPopup(this)">Каталог товаров</button>
+                    <button class="button--catalog-back desk-hidden" onclick="closePopupSubmenu(this)"></button>
+                </div>
+                <div class="header-input__wrap">
+                    <input class="input--header-search" type="search" name="header-search" id="header-search" placeholder="Поиск по товарам" onclick="openHeaderPopup(this)">
+                </div>
+                <div class="header-account__wrap flex">
+                    <a href="/favourite" class="header-account header-account__favourite flex fd-column justify-sb" title="">Избранное</a>
+                    <button class="header-account header-account__login account-login flex fd-column justify-sb" name="">Войти</button>
+                    <a href="/cart" class="header-account header-account__cart flex fd-column justify-sb" title="">1089 ₸ <span class="cart-badge">3</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- всплывашка каталога -->
+    <div class="menu-popup__wrap catalog-popup__wrap">
+        <div class="popup-overlay"></div>
+        <div class="menu-popup catalog-popup">
+            <div class="catalog-buttons__wrap back-secondary__wrap active">
+                <button class="button--catalog-back button-back-secondary desk-hidden" onclick="closePopupSubmenu(this)"></button>
+            </div>
+            <div class="container flex">
+                <div class="catalog-popup__column">
+                    <h2 class="catalog-popup__heading mob-hidden">Каталог</h2>
+                    <ul class="catalog-popup__list">
+                        <li class="catalog-popup__item has-submenu" title="Сухие смеси и грунтовки">
+                            <span class="desk-hidden">Сухие смеси и грунтовки</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Сухие смеси и грунтовки
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Сухие смеси и грунтовки</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Листовые материалы">
+                            <span class="desk-hidden">Листовые материалы</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Листовые материалы
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Листовые материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Клеи и средства для укладки плитки">
+                            <span class="desk-hidden">Клеи и средства для укладки плитки</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Клеи и средства для укладки плитки
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Клеи и средства для укладки плитки</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Строительные расходные материалы">
+                            <span class="desk-hidden">Строительные расходные материалы</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Строительные расходные материалы
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Строительные расходные материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Аксессуары для электроинструментов">
+                            <span class="desk-hidden">Аксессуары для электроинструментов</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Аксессуары для электроинструментов
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Аксессуары для электроинструментов</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Средства индивидуальной защиты">
+                            <span class="desk-hidden">Средства индивидуальной защиты</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Средства индивидуальной защиты
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Средства индивидуальной защиты</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Измерительно-разметочные инструменты">
+                            <span class="desk-hidden">Измерительно-разметочные инструменты</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Измерительно-разметочные инструменты
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Измерительно-разметочные инструменты</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Штукатурно-отделочные инструменты">
+                            <span class="desk-hidden">Штукатурно-отделочные инструменты</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Штукатурно-отделочные инструменты
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Штукатурно-отделочные инструменты</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Электротовары: кабель и монтаж">
+                            <span class="desk-hidden">Электротовары: кабель и монтаж</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Электротовары: кабель и монтаж
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Электротовары: кабель и монтаж</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Электрощитовое оборудование">
+                            <span class="desk-hidden">Электрощитовое оборудование</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Электрощитовое оборудование
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Электрощитовое оборудование </h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Удлинители и тройники">
+                            <span class="desk-hidden">Удлинители и тройники</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Удлинители и тройники
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Листовые материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Водоснабжение">
+                            <span class="desk-hidden">Водоснабжение</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Водоснабжение
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Листовые материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="catalog-popup__item has-submenu" title="Скобянные изделия">
+                            <span class="desk-hidden">Скобянные изделия</span>
+                            <a class="mob-hidden" href="/catalog">
+                                Скобянные изделия
+                            </a>
+                            <div class="catalog-popup__submenu">
+                                <div class="catalog-popup__header-wrap">
+                                    <h3 class="catalog-popup__heading">Листовые материалы</h3>
+                                    <div class="catalog-popup__heading-link desk-hidden">Все товары категории</div>
+                                </div>
+                                <ul class="catalog-popup__list">
+                                    <li class="catalog-popup__item"><a href="/catalog" title="Шумоизоляция">Шумоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                    <li class="catalog-popup__item" title="Теплоизоляция"><a href="/catalog">Теплоизоляция</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- всплывашка поиска -->
+    <div class="menu-popup__wrap search-popup__wrap">
+        <div class="popup-overlay"></div>
+        <div class="menu-popup search-popup">
+            <div class="container">
+                <ul class="search-results grid">
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card product-card--search br-12">
+                        <figure class="product-card__image-wrap">
+                            <div class="product-card__stock flex align-center">
+                                <div class="badge--instock">В наличии</div>
+                                <span class="badge--hot flex align-center">15%</span>
+                            </div>
+                            
+                            <button class="product-card__favourite toggle-active flex align-center justify-center">
+                                <svg width="15" height="14" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 8.50734C30 10.2779 29.3311 12.0637 27.978 13.4221L25.728 15.681L16.0439 25.4037C15.9983 25.4495 15.9831 25.4647 15.9375 25.4953C15.8919 25.4647 15.8767 25.4495 15.8311 25.4037L3.89696 13.4221C2.54392 12.0637 1.875 10.2931 1.875 8.50734C1.875 6.72155 2.54392 4.93576 3.89696 3.57734C6.60304 0.875751 10.9814 0.875751 13.6875 3.57734L15.9223 5.83628L18.1723 3.57734C20.8784 0.875751 25.2416 0.875751 27.9476 3.57734C29.3311 4.93576 30 6.70628 30 8.50734Z" stroke="#86868B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                            <a href="/catalog/product">
+                                <img class="product-card__image" src="/assets/img/products/gipsokarton.png" alt="">
+                            </a>
+                        </figure>
+                        <div class="product-card__content flex fd-column">
+                            <span class="product-card__meta">2000х900 мм 1.8 м²</span>
+                            <a href="/catalog/product">
+                                <h3 class="product-card__name">Гипсокартон влагостойкий 12.5 мм Gyproc Эрго</h3>
+                            </a>
+                            <div class="product-card__order flex">
+                                <button class="button button--product-card toggle-active">В корзину</button>
+                                <div class="product-card__input">
+                                    <input class="input--product-card" type="number" value="1" max="200" oninput="maxLenght(this)">
+                                    <button class="set-quantity minus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                                            <path d="M1.45108 0.936279L18.5489 1.06355" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="set-quantity plus" onclick="changeQuantity(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M9.93636 1.451L10.0636 18.5488" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.45108 9.93628L18.5489 10.0636" stroke="#393D46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex align-center">
+                                <div class="product-card__price"><span class="price">679</span>₸</div>
+                                <div class="product-card__old-price"><span class="price">800</span>₸</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="/catalog" class="button button--light">Посмотреть все</a>
+            </div>
+        </div>
+    </div>
+    <!-- попап мобильного меню -->
+    <div class="container">
+    <div class="mob-menu">
+        <button class="mob-menu__cities mob-menu__rounded choose-city flex align-center">Астана</button>
+        <nav class="mob-menu__list__wrap">
+            <ul class="mob-menu__list">
+                <li class="mob-menu__item"><a href="/" title="">Главная</a></li>
+                <li class="mob-menu__item"><a href="/catalog" title="">Каталог</a></li>
+                <li class="mob-menu__item"><a href="/cart" title="">Корзина</a></li>
+                <li class="mob-menu__item"><a href="/account" title="">Профиль</a></li>
+                <li class="mob-menu__item"><a href="/shops" title="">Магазины</a></li>
+                <li class="mob-menu__item"><a href="/favourite" title="">Избранное</a></li>
+                <li class="mob-menu__item"><a href="/sales" title="">Акции</a></li>
+                <li class="mob-menu__item"><a href="/delivery" title="">Доставка и Оплата</a></li>
+                <li class="mob-menu__item"><a href="#" title="">Блог</a></li>
+                <li class="mob-menu__item"><a href="#" title="">Политика конфиденциальности</a></li>
+            </ul>
+        </nav>
+        <footer class="mob-menu__contacts mob-menu__rounded flex justify-center">
+            <contact class="mob-menu__phone__wrap">
+                <a class="mob-menu__phone" href="tel:89999999999">+7 (999) 999 99 99</a>
+                <p class="mob-menu__phone-text">Круглосуточно и бесплатно</p>
+            </contact>
+        </footer>
+    </div>
+    </div>
+
+    <nav class="container">
+        <ol class="breadcrumbs flex mob-hidden">
+            <li class="breadcrumb">
+                <a href="/">Главная</a>
+            </li>
+            <li class="breadcrumb">
+                <a href="/">Корзина</a>
+            </li>
+            <li class="breadcrumb">Оформление заказа</li>
+        </ol>
+    </nav>
+
+    <main class="container">
+        <div class="page-heading__wrap order__heading flex align-center justify-sb">
+            <div class="flex">
+                <a href="/cart" class="button--page-back desk-hidden"></a>
+                <h1 class="page-heading">Оформление заказа</h1>
+            </div>
+            <button name="Кнопка меню" class="burger desk-hidden">
+                <div class="burger-line"></div>
+            </button>
+        </div>
+
+        <section class="order-content flex justify-sb">
+            <div class="order-content__list">
+                <form action="" class="order-form flex fd-column">
+                    <label class="order-form__item">
+                        <div class="order-form__name">Имя</div>
+                        <input class="order-form__input" type="text" name="ur-name" id="" placeholder="Ваше имя">
+                    </label>
+                    <label class="order-form__item">
+                        <div class="order-form__name">Номер телефона</div>
+                        <input class="order-form__input" type="tel" name="" id="" placeholder="+7">
+                    </label>
+                    <label class="order-form__item">
+                        <div class="order-form__name">Электронная почта</div>
+                        <input class="order-form__input" type="mail" name="" id="" placeholder="example@">
+                    </label>
+                    <div class="order-form__mobile-fields desk-hidden">
+                        <div class="payment-method__wrap">
+                            <input class="order-form__input payment-method" type="button" value="Картой онлайн">
+                        </div>
+                        <div class="change__wrap">
+                            <input class="order-form__input change" type="number" name="" id="" min="1" max="200000000000">
+                        </div>
+                    </div>
+                    <label class="order-form__item order-form__address">
+                        <div class="order-form__name">Адрес доставки</div>
+                        <div class="order-form__delivery-input">
+                            <textarea class="order-form__input" name="" id="" placeholder="Укажите адрес"></textarea>
+                            <button class="order-form__change-address">Изменить</button>
+                        </div>
+                    </label>
+                    <label class="order-form__item">
+                        <div class="order-form__name">Комментарий</div>
+                        <textarea class="order-form__input order-form__comment" type="text" name="" id="" placeholder="Комментарий к заказу"></textarea>
+                    </label>
+                </form>
+            </div>
+            <div class="order__total-list">
+                <div class="order-address__wrap desk-hidden">
+                    <h2 class="order-address__heading">Адрес доставки</h2>
+                    <div class="order-divider"></div>
+                    <button class="order-address">Астана, ул. Садовая, 57, эт. 11, кв. 92</button>
+                </div>
+                <div>
+                    <div class="order-total__content">
+                        <h2 class="order-total__heading">Сумма заказа</h2>
+                        <table class="order-total__data">
+                            <tr>
+                                <td>2 товара на сумму</td>
+                                <td>79 000 ₸</td>
+                            </tr>
+                            <tr>
+                                <td class="order-total__delivery">Доставка</td>
+                                <td>270 ₸</td>
+                            </tr>
+                            <tr>
+                                <td>Скидка</td>
+                                <td class="cart-discount">-100 ₸</td>
+                            </tr>
+                        </table>
+                        <div class="order-divider"></div>
+                        <div class="order-total flex justify-sb">
+                            <div class="total mob-hidden">Итого</div>
+                            <div class="total-price">79 170 ₸</div>
+                        </div>
+                    </div>
+                    <a class="button to-order"><span class="mob-hidden">К оформлению заказа</span><span class="desk-hidden">Далее</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container flex justify-sb">
+            <nav class="footer-menu">
+                <ul class="footer-menu__list">
+                    <li class="footer-menu__item"><a href="/sales" title="Перейти к акциям">Акции</a></li>
+                    <li class="footer-menu__item"><a href="#" title="">Блог</a></li>
+                    <li class="footer-menu__item"><a href="#" title="">Правовая информация</a></li>
+                    <li class="footer-menu__item"><a href="/shops" title="Перейти к магазинам">Магазины</a></li>
+                    <li class="footer-menu__item"><a href="/delivery" title="Информация о доставке">Доставка и оплата</a></li>
+                </ul>
+            </nav>
+            <div class="footer-logo__wrap">
+                <img class="footer-logo" src="/assets/img/logo.png" alt="Логотип сайта">
+                <div class="footer-logo__socials flex justify-center">
+                    <a href="#" class="footer-social vk" title="Перейти в группу вк">
+                    </a>
+                    <a href="#" class="footer-social telegram" title="Перейти в телеграм канал">
+                    </a>
+                </div>
+            </div>
+            <address class="footer-contacts flex fd-column justify-sb">
+                <div class="contacts-wrap">
+                    <div class="contacts-name">Телефон</div>
+                    <a href="tel:89999999999" class="contacts-phone" title="">8 (999) 000-99-99</a>
+                </div>
+                <div class="contacts-wrap">
+                    <div class="contacts-name">Адрес</div>
+                    <div>Астана, Астана</div>
+                </div>
+            </address>
+        </div>
+        <div class="cr">
+            2024 © «BUILD ART»
+        </div>
+    </footer>
+
+    <div class="popup order-popup">
+        <div class="popup__background">
+            <div class="popup__boundary">
+                <div class="popup__container">
+                    <div class="icon--popup-close popup__close"></div>
+                    <h2 class="popup__heading">Подтвердите данные для заказа</h2>
+                    <div class="order-total__content">
+                        <div class="flex justify-sb">
+                            <div class="popup-order__subheading">Тип получения</div>
+                            <div class="popup-order__value">Самовывоз</div>
+                        </div>
+                        <div class="order-divider"></div>
+                        <div class="flex justify-sb">
+                            <div class="popup-order__subheading">Ожидаемая дата</div>
+                            <div class="popup-order__value">Сегодня, 18:00</div>
+                        </div>
+                        <div class="order-divider"></div>
+                        <div class="popup-order__address">
+                            <div class="popup-order__subheading">Адрес</div>
+                            <div>г. Астана, ул. Чайковского, 26, под. 3, этаж 11, кв. 470</div>
+                        </div>
+                    </div>
+                    <div class="order-popup__buttons flex">
+                        <button class="button order-pay">Подтвердить</button>
+                        <button class="button button--light order-refuse">Отменить</button>
+                    </div>
+                    <div class="order-notice order-accepted">
+                        <div class="order-notice__inner flex fd-column justify-sb">
+                            <img class="img-accepted" src="img/order-accepted.png" alt="">
+                            <h2 class="popup__heading">Заказ #149 принят в работу</h2>
+                            <p class="popup__subheading">Заказ принят в работу. Отслеживайте статус заказа в личном кабинете.</p>
+                            <div class="order-popup__buttons flex">
+                                <button class="button">Отследить заказ</button>
+                                <button class="button button--light">Отменить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-notice order-declined">
+                        <div class="order-notice__inner flex fd-column justify-sb">
+                            <img class="img-accepted" src="img/order-declined.png" alt="">
+                            <h2 class="popup__heading">Ошибка оплаты (</h2>
+                            <p class="popup__subheading">Попробуйте повторить оплату заказа.</p>
+                            <div class="order-popup__buttons flex">
+                                <button class="button">Оплатить</button>
+                                <button class="button button--light">На главную</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- авторизация -->
+    <div class="popup login-popup mob-popup-100">
+        <div class="popup__background steps-container">
+            <div class="popup__boundary">
+                <div class="popup__container step" data-step="1">
+                    <div class="icon--popup-close popup__close"></div>
+                    <h2 class="popup__heading">Вход или регистрация</h2>
+                    <p class="popup__subheading">После авторизации Вам будут начисляться баллы за заказ, а также сохранится адрес доставки.</p>
+                    <div class="login-tel__wrap">
+                        <input type="tel" name="login-tel" id="" placeholder="+7 (999) 999 99 99">
+                    </div>
+                    <input type="submit" value="Продолжить" class="button nextStep">
+                    <p class="login-agreement">Продолжив, вы соглашаетесь <a href="#" class="accent-color">с обработкой персональных данных и Пользовательским соглашением</a></p>
+                </div>
+                <div class="popup__container step step_hide" data-step="2">
+                    <div class="icon--popup-close popup__close mob-hidden"></div>
+                    <button class="prevStep"></button>
+                    <h2 class="popup__heading">Введите код</h2>
+                    <p class="popup__subheading">Мы отправили код с сообщением на <span class="confirm-number">+7 (999) 999 99 99</span></p>
+                    <div class="login-confirm__wrap flex">
+                        <input class="login-confirm" type="number" name="log-comfirm1" id="">
+                        <input class="login-confirm" type="number" name="log-comfirm2" id="">
+                        <input class="login-confirm" type="number" name="log-comfirm3" id="">
+                        <input class="login-confirm" type="number" name="log-comfirm4" id="">
+                    </div>
+                    <div class="login-countdown">
+                        <p>Отправка нового кода возможна через <span class="login-countdown__time">12</span> сек</p>
+                        <button class="accent-color hidden">Отправить новый код</button>
+                    </div>
+
+                    <a href="/account">
+                        <input type="submit" value="Продолжить" class="button">
+                    </a>
+                    <p class="login-agreement">Продолжив, вы соглашаетесь <a href="#" class="accent-color">с обработкой персональных данных и Пользовательским соглашением</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- геолокация -->
+    <div class="popup address-popup">
+        <div class="popup__background">
+            <div class="popup__boundary">
+                <div class="popup__container">
+                    <div class="icon--popup-close popup__close"></div>
+                    <h2 class="popup__heading">Какой у вас адрес?</h2>
+                    <p class="popup__subheading">Адрес сохраним для будущих заказов</p>
+                    <div class="address-popup__buttons flex fd-column">
+                        <button class="button set-address">Указать адрес</button>
+                        <button class="button button--light popup__close">Забрать из магазина</button>
+                    </div>
+                    <div class="address-login">Уже есть аккаунт?
+                        <button class="accent-color account-login">Войти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- настройки адресов -->
+    <div class="popup location-popup">
+        <div class="popup__background steps-container">
+            <div class="popup__boundary">
+                <div class="popup__container step" data-step="1">
+                    <div class="icon--popup-close popup__close"></div>
+                    <h2 class="popup__heading">Ваш город</h2>
+                    <p class="popup__subheading">Выберете из списка</p>
+                    <div class="popup__city-select">
+                        <p class="popup__city-name">Город</p>
+                        <ul class="popup__city-list">
+                            <li class="popup__city">Sharjah</li>
+                            <li class="popup__city">Al Ain</li>
+                            <li class="popup__city">Ajman</li>
+                            <li class="popup__city">Ras Al Khaimah</li>
+                        </ul>
+                    </div>
+                    <button class="button nextStep">Выбрать</button>
+                </div>
+                <div class="popup__container add-address step step_hide pp-mobile-full" data-step="2">
+                    <div class="icon--popup-close popup__close"></div>
+                    <div class="flex add-address__content">
+                        <div class="add-address__map">
+                            <img src="/assets/img/map.png" alt="">
+                        </div>
+                        <div class="add-address__form">
+                            <div class="swipe-toggler flex justify-center desk-hidden"></div>
+                            <h2 class="popup__heading">Добавить адрес</h2>
+                            <div class="swipe-content">
+                                <form action="#" class="flex fd-column">
+                                    <input type="text" name="loc-address" placeholder="Город, улица, дом">
+                                    <button class="get-location accent-color flex align-center">Определить местоположение</button>
+                                    <div class="add-address__grid grid">
+                                        <input type="text" name="loc-entrance" placeholder="Подъезд">
+                                        <input type="text" name="loc-door-code" placeholder="Код двери">
+                                        <input type="text" name="loc-floor" placeholder="Этаж">
+                                        <input type="text" name="loc-apartment" placeholder="Квартира">
+                                    </div>
+                                    <input type="checkbox" name="private-house" id="private-house" class="hidden">
+                                    <label for="private-house" class="form-private-house flex align-center desk-hidden">
+                                        Частный дом
+                                    </label>
+                                    <input type="text" name="loc-comment" placeholder="Комментарий">
+                                    <div class="add-address__btn-wrap">
+                                        <!-- вернуть кнопку сюда -->
+                                    </div>
+                            </form>
+                            <!-- эту кнопку вернуть на место.. если нужно -->
+                            <button class="button add-address__button nextStep">Указать адрес</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__container delivery step step_hide" data-step="3">
+                    <div class="icon--popup-close popup__close"></div>
+                    <div class="delivery__toggler flex align-center mob-hidden">
+                        <div class="toggler-take-out nextStep">Самовывоз</div>
+                        <div class="toggler-delivery active">Доставка</div>
+                    </div>
+                    <div class="my-addresses can-delete flex fd-column">
+                        <div class="flex justify-sb">
+                            <div class="flex">
+                                <button class="prevStep desk-hidden"></button>
+                                <h2 class="popup__heading">Мои адреса</h2>
+                            </div>
+                            <button class="adresses__remove-all">Удалить все</button>
+                        </div>
+                        <div class="add-address-mob desk-hidden">
+                            <button class="btn--add-address flex align-center">Добавить адрес</button>
+                        </div>
+                        <ul class="account-addresses">
+                            <li class="account-address flex align-center toggle-active">
+                                <label class="flex align-center">
+                                    <input class="hidden" type="radio" name="set-city" checked>
+                                    <span class="account-address__icon"></span>
+                                    Астана, ул.Нансена, 123
+                                </label>
+                                <button class="edit-address"></button>
+                                <button class="btn--delete-address desk-hidden">удалить</button>
+                            </li>
+                            <li class="account-address flex align-center toggle-active">
+                                <label class="flex align-center">
+                                    <input class="hidden" type="radio" name="set-city">
+                                    <span class="account-address__icon"></span>
+                                    Астана, ул.Мира, 43
+                                </label>
+                                <button class="edit-address"></button>
+                                <button class="btn--delete-address desk-hidden">удалить</button>
+                            </li>
+                            <li class="account-address flex align-center toggle-active">
+                                <label class="flex align-center">
+                                    <input class="hidden" type="radio" name="set-city">
+                                    <span class="account-address__icon"></span>
+                                    Астана, ул.Нансена, 123
+                                </label>
+                                <button class="edit-address"></button>
+                                <button class="btn--delete-address desk-hidden">удалить</button>
+                            </li>
+                        </ul>
+                        <div class="delivery__buttons flex">
+                            <button class="button button--light button--edit-addresses mob-hidden popup__close">Добавить адрес</button>
+                            <button class="button button--set-addresses popup__close">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- самовывоз попап -->
+    <div class="popup take-off-popup">
+        <div class="popup__background">
+            <div class="popup__boundary">
+                <div class="popup__container delivery take-off">
+                    <div class="icon--popup-close popup__close"></div>
+                    <div class="flex take-off__wrap">
+                        <div class="take-off__map">
+                            <img src="/assets/img/map-color.png" alt="">
+                        </div>
+                        <div class="take-off__content flex fd-column to-top">
+                            <div class="delivery__toggler flex align-center mob-hidden">
+                                <div class="toggler-take-out active">Самовывоз</div>
+                                <div class="toggler-delivery prevStep">Доставка</div>
+                            </div>
+                            <div class="swipe-toggler take-out__toggler justify-center"></div>
+                            <div class="take-out__inactive-wrap">
+                                <div class="take-out__inactive-name desk-hidden">Астана, ул.Нансена, 123</div>
+                                <div class="take-out__inactive-pagination flex justify-center">
+                                    <span class="take-out__pagination active"></span>
+                                    <span class="take-out__pagination"></span>
+                                    <span class="take-out__pagination"></span>
+                                    <span class="take-out__pagination"></span>
+                                </div>
+                            </div>
+                            <div class="my-addresses flex fd-column">
+                                <div class="flex justify-sb">
+                                    <div class="flex">
+                                        <button class="prevStep desk-hidden"></button>
+                                        <h2 class="popup__heading"><span class="mob-hidden">Рестораны</span><span class="desk-hidden">Самовывоз</span></h2>
+                                    </div>
+                                    <button class="show-map accent-color desk-hidden">Смотреть на карте</button>
+                                </div>
+                                <ul class="account-addresses">
+                                    <li class="account-address flex align-center toggle-active">
+                                        <label class="flex align-center justify-sb">
+                                            <input class="hidden" type="radio" name="set-take-off" checked>
+                                            <span class="account-address__icon"></span>
+                                            Астана, ул.Нансена, 123
+                                            <div class="delivery-distance desk-hidden">3 км</div>
+                                        </label>
+                                    </li>
+                                    <li class="account-address flex align-center toggle-active">
+                                        <label class="flex align-center">
+                                            <input class="hidden" type="radio" name="set-take-off">
+                                            <span class="account-address__icon"></span>
+                                            Астана, ул.Мира, 43
+                                            <div class="delivery-distance desk-hidden">3 км</div>
+                                        </label>
+                                    </li>
+                                    <li class="account-address flex align-center toggle-active">
+                                        <label class="flex align-center">
+                                            <input class="hidden" type="radio" name="set-take-off">
+                                            <span class="account-address__icon"></span>
+                                            Астана, ул.Нансена, 123
+                                            <div class="delivery-distance desk-hidden">3 км</div>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="take-off__buttons flex">
+                                    <button class="button button--set-addresses popup__close">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts.js"></script>
+    <script src="order.js"></script>
+    
+</body>
+</html>

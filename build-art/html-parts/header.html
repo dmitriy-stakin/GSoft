@@ -1,0 +1,48 @@
+<header class="header">
+    <div class="container">
+        <div class="header-line header-line__up flex align-center justify-sb">
+            <div class="header__city-phone flex">
+                <div class="header-city__wrap">
+                    <button class="header-city__current choose-city flex align-center">Астана</button>
+                </div>
+                <contact class="header-phone__wrap flex align-center">
+                    <a href="tel:89990009999" class="header-phone">8 (999) 000-99-99</a>
+                </contact>
+            </div>
+
+            <figure class="header-logo__wrap">
+                <a href="/" title="На главную">
+                    <img src="/assets/img/logo.png" alt="" class="header-logo">
+                </a>
+            </figure>
+
+            <nav class="header-menu__wrap">
+                <ul class="header-menu__list flex">
+                    <li class="header-menu__item"><a href="#" title="">Блог</a></li>
+                    <li class="header-menu__item"><a href="/sales" title="">Акции</a></li>
+                    <li class="header-menu__item"><a href="/shops" title="">Магазины</a></li>
+                    <li class="header-menu__item"><a href="/delivery" title="">Доставка и оплата</a></li>
+                </ul>
+            </nav>
+
+            <button name="Кнопка меню" class="burger">
+                <div class="burger-line"></div>
+            </button>
+        </div>
+
+        <div class="header-line header-line__bottom flex align-center justify-sb">
+            <div class="catalog-buttons__wrap">
+                <button class="button button--catalog open-catalog br-12" onclick="openHeaderPopup(this)">Каталог товаров</button>
+                <button class="button--catalog-back desk-hidden" onclick="closePopupSubmenu(this)"></button>
+            </div>
+            <div class="header-input__wrap">
+                <input class="input--header-search" type="search" name="header-search" id="header-search" placeholder="Поиск по товарам" onclick="openHeaderPopup(this)">
+            </div>
+            <div class="header-account__wrap flex">
+                <a href="/favourite" class="header-account header-account__favourite flex fd-column justify-sb" title="">Избранное</a>
+                <button class="header-account header-account__login account-login flex fd-column justify-sb" name="">Войти</button>
+                <a href="/cart" class="header-account header-account__cart flex fd-column justify-sb" title="">1089 ₸ <span class="cart-badge">3</span></a>
+            </div>
+        </div>
+    </div>
+</header>

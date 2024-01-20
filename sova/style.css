@@ -7,17 +7,14 @@
 * {box-sizing: border-box;}
 html {
     font-size: 22px;
+    scrollbar-gutter: stable;
 }
 body {
     font-family: PTserif, serif;
     margin: 0;
 }
+main {overflow-x: clip;}
 h1, h2, h3, h4 {margin: 0;}
-h2 {
-    font-weight: 400;
-    font-size: clamp(1.364rem, 0.763rem + 3.523vw, 2.909rem);
-    text-transform: uppercase;
-}
 ul, ol {
     margin: 0;
     padding: 0;
@@ -37,11 +34,9 @@ a {
 }
 figure {margin: 0;}
 img {
+    display: block;
     width: 100%;
     height: auto;
-}
-section {
-    overflow-x: clip;
 }
 address {
     font-style: normal;
@@ -52,7 +47,10 @@ address {
     margin: 0 auto;
     padding: 0 16px;
 }
+.body-hidden {overflow-y: hidden;}
 .hidden {display: none;}
+.accent-color{color: var(--accent-color)}
+.text-muted {color: #8C8C8C}
 
 @layer components, variations;
 
@@ -165,6 +163,109 @@ input:focus,textarea:focus {
     text-align: center;
 }
 .footer-logo {margin-bottom: clamp(0.545rem, 0.333rem + 1.244vw, 1.091rem);}
+
+/* popup styles */
+.popup__background {
+    position: fixed;
+    inset: 0;
+    z-index: 12;
+
+    display: flex;
+    padding: 20px;
+
+    opacity: 0;
+    background-color: transparent;
+    transition: all 1s;
+    pointer-events: none;
+}
+.popup__boundary {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    pointer-events: none;
+}
+.popup__container {
+    position: relative;
+
+    max-width: 400px;
+    width: 100%;
+
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.popup__container::-webkit-scrollbar, .menu-popup__wrap::-webkit-scrollbar {
+    display: none;
+}
+.icon--popup-close {
+    position: absolute;
+    top: 5px;
+    right: -37px;
+    z-index: 2;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 0;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+}
+.icon--popup-close:before, .icon--popup-close:after {
+    content: '';
+
+    position: absolute;
+    top: 15px;
+
+    width: 22px;
+    height: 2px;
+
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.icon--popup-close:before {
+    left: 4px;
+    transform: rotate(45deg);
+}
+.icon--popup-close:after {
+    right: 4px;
+    transform: rotate(-45deg);
+}
+.popup-content {
+    overflow-y: scroll;
+}
+
+.step_hide {
+    display: none;
+}
+.prevStep:not(.toggler-delivery) {
+    position: absolute;
+    top: 37px;
+    left: 28px;
+
+    width: 7px;
+    height: 14px;
+
+    background: url(/assets/icons/chevron-grey-right.svg) center/contain no-repeat;
+    rotate: 180deg;
+}
+/* when active */
+.popup-active .popup__background {
+    opacity: 1;
+    background-color: #000000c9;
+    transition: none;
+}
+.popup-active .popup__background, .popup-active .popup__container {
+    pointer-events: all;
+}
+.popup-active .popup-shadow {
+    background-color: #000000c9;
+}
+.popup-active .popup__container, .popup-active .wpcf7-response-output {
+    opacity: 1;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .footer-socials, .footer-address {

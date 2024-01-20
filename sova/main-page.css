@@ -24,8 +24,14 @@
     font-display: swap;
 }
 
+section {overflow-x: clip}
 a{font-family: Arial, sans-serif;}
 h1,h2,h3,h4 {font-family: 'Orchidea Pro', serif;}
+h2 {
+    font-weight: 400;
+    font-size: clamp(1.364rem, 0.763rem + 3.523vw, 2.909rem);
+    text-transform: uppercase;
+}
 @layer components {
     input {
         padding: 8px 12px;

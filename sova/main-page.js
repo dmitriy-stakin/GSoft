@@ -1,21 +1,3 @@
-const isMobile = /iPhone|Android/i.test(navigator.userAgent),
-      isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(navigator.userAgent);
-
-//смена стилей шапки
-const darkSections = document.querySelectorAll('.section-dark')
-
-document.addEventListener('scroll', () => {
-    ( window.scrollY > 0 ) ? document.querySelector('.header-main').classList.add('scrolling') : document.querySelector('.header-main').classList.remove('scrolling')
-    darkSections.forEach(section => {
-        if(section.getBoundingClientRect().top < 5) {
-            document.querySelector('.header-main').classList.add('dark');
-        } 
-        if (section.getBoundingClientRect().bottom <= 5) {
-            document.querySelector('.header-main').classList.remove('dark')
-        }
-    })
-})
-
 SmoothScroll({
     // Время скролла 400 = 0.4 секунды
     animationTime    : 600,

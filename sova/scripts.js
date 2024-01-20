@@ -1,9 +1,27 @@
 const isMobile = /iPhone|Android/i.test(navigator.userAgent),
-      isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(navigator.userAgent);
+      isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(navigator.userAgent),
+      body = document.querySelector('body')
+
+//смена стилей шапки
+const darkSections = document.querySelectorAll('.section-dark')
+
+document.addEventListener('scroll', () => {
+    ( window.scrollY > 0 ) ? document.querySelector('.header').classList.add('scrolling') : document.querySelector('.header').classList.remove('scrolling')
+    if(darkSections) {
+        darkSections.forEach(section => {
+            if(section.getBoundingClientRect().top < 5) {
+                document.querySelector('.header').classList.add('dark');
+            } 
+            if (section.getBoundingClientRect().bottom <= 5) {
+                document.querySelector('.header').classList.remove('dark')
+            }
+        })
+    }
+})
 
 const mobMenu = {
     wrapper: document.querySelector('.mob-menu'),
-    burger: document.querySelectorAll('.burger'),
+    burger: document.querySelectorAll('.burger-button'),
     links: document.querySelectorAll('.mob-menu .header-menu__item'),
 }
 
@@ -51,10 +69,10 @@ prodBtnWrap
 document.querySelectorAll('.toggle-active').forEach(btn => {
     btn.onclick = ()=> {
         //для продуктовых карточек
-        // if(btn.classList.contains('button--product-card')) {
-        //     prodBtnWrap = btn.closest('.product-card__order')
-        //     prodBtnWrap.classList.add('bottom-fixed')
-        // }
+        if(btn.classList.contains('button--product-card')) {
+            prodBtnWrap = btn.closest('.product-card__order')
+            prodBtnWrap.classList.add('active')
+        }
 
         //для адресов
         // if(btn.classList.contains('account-address')) {
@@ -83,12 +101,8 @@ function changeQuantity(button) {
             field.value = parseInt(field.value) + 1
     }
     if(field.value == '0'){
-        if (document.querySelector('.quantity-popup.popup-active')) {
-            document.querySelector('.quantity-popup').classList.remove('popup-active')
-        }
+        prodBtnWrap.classList.remove('active')
         button.closest('.product-card__input').previousElementSibling.classList.remove('active')
-        if (button.parentNode.classList.contains('.product-card__order'))
-        button.closest('.product-card__order').classList.remove('bottom-fixed')
     } 
 }
 
@@ -105,3 +119,133 @@ function maxLenght(el) {
         el.value = 0
     }
 }
+
+// функционал попапов
+function Popup ( openBtns, container ) {
+    if (container) {
+        this.container = container,
+        this.background = container.querySelector('.popup__background'),
+        this.content = container.querySelector('.popup__boundary'),
+
+        this.openBtns = openBtns,
+        this.closeBtns = container.querySelectorAll('.popup__close'),
+
+        this.steps = container.querySelectorAll('.step'),
+        this.nextSteps = container.querySelectorAll('.nextStep'),
+        this.prevSteps = container.querySelectorAll('.prevStep')
+
+        this.currentStep = 1
+
+    if(this.prevSteps.length > 0) {
+        this.prevSteps.forEach (step => {
+            step.onclick = ()=> {
+                this.prevStepsHandler()
+            }
+        })
+    }
+    if(this.nextSteps.length > 0) {
+        this.nextSteps.forEach (step => {
+            step.onclick = ()=> {
+                this.nextStepsHandler()
+            }
+        })
+    }
+
+    this.prevStepsHandler = function () {
+        this.currentStep -= 1
+        this.toggleStep()
+    }
+    this.nextStepsHandler = function () {
+        this.currentStep += 1
+        this.toggleStep()
+    }
+
+    this.toggleStep = function() {
+        if(this.steps.length > 0) {
+            this.steps.forEach(step => {
+                step.classList.add('step_hide')
+                if(step.dataset.step == this.currentStep) step.classList.toggle('step_hide')
+            })
+        }
+    }
+
+    this.openBtns.forEach( button => {
+        button.onclick = () => {
+            document.querySelectorAll('.popup-active').forEach(popup=>{
+                popup.classList.remove('popup-active')
+            })
+            this.container.classList.add('popup-active')
+            body.classList.add('body-hidden')
+
+            this.background.addEventListener('click', listenOutsideClick = (e) => {
+                var withinBoundaries = e.composedPath().includes(this.content);
+                if ( ! withinBoundaries ) {
+                    this.container.classList.remove('popup-active')
+                    body.classList.remove('body-hidden')
+    
+                    this.currentStep = 1
+                    this.toggleStep()
+    
+                    this.background.removeEventListener('click', listenOutsideClick);
+                }
+            })
+        }
+    })
+
+    this.closeBtns.forEach( button => {
+        button.onclick = () => {
+            this.currentStep = 1
+            this.toggleStep()
+
+            this.container.classList.remove('popup-active')
+            body.classList.remove('body-hidden')
+        }
+    })
+    }
+}
+let popupBtns, popupContainer
+
+function SwipeSection(toggler, section) {
+    if(section) {
+        this.toggler = toggler,
+        this.section = section,
+        this.content = this.section.querySelector('.swipe-content'),
+
+        this.firstTouch,
+        this.yDown = null,
+        this.yDiff,
+
+        this.toggler.addEventListener('touchstart', handleTouchStart = (evt) => {
+            this.yDown = evt.touches[0].pageY;
+        }, {passive: true});
+
+        this.toggler.addEventListener('touchmove', handleTouchMove = (evt) => {
+            if ( ! this.yDown ) {
+                return;
+            }
+            this.yDiff = this.yDown - evt.touches[0].pageY;
+                                                                                
+            if ( this.yDiff > 0 ) {
+                this.section.classList.add('to-top')
+            } else {
+                if(this.section.classList.contains('to-top')){
+                    this.section.classList.remove('to-top')
+                } else if (this.section.classList.contains('popup-active')) {
+                    this.section.classList.remove('popup-active')
+                    setTimeout(()=> {
+                        body.classList.remove('body-hidden')
+                    }, 100)
+                }
+            }                                              
+            /* reset values */
+            this.yDown = null;
+        }, {passive: true});
+
+        if( this.content ) {
+            this.content.onclick = ()=>{
+                this.section.classList.add('to-top')
+            }
+        }
+    }
+}
+let swipeToggler, swipeSection

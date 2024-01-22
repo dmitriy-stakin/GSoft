@@ -7,7 +7,7 @@
 * {box-sizing: border-box;}
 html {
     font-size: 22px;
-    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable; */
 }
 body {
     font-family: PTserif, serif;

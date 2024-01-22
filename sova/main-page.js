@@ -1,3 +1,6 @@
+const isMobile = /iPhone|Android/i.test(navigator.userAgent),
+      isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(navigator.userAgent)
+
 SmoothScroll({
     // Время скролла 400 = 0.4 секунды
     animationTime    : 600,
